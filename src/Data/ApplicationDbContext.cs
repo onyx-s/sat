@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OnyxSAT.Models;
 
@@ -31,5 +31,6 @@ namespace OnyxSAT.Data
         public DbSet<Session> Sessions { get; set; }
         public DbSet<TeachingPeriod> TeachingPeriods { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<OnyxSAT.Models.User> User { get; set; }
     }
 }
