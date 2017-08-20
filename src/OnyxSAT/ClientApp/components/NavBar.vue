@@ -12,14 +12,25 @@
           <router-link tag="li" to="/users" class="nav-item">
             <a class="nav-link">Users</a>
           </router-link>
+          <router-link tag="li" to="/login" class="nav-item">
+            <a class="nav-link">Login</a>
+          </router-link>
         </ul>
       </div>
     </nav>
 </template>
 
+<script>
+export default {
+    name: 'navbar',
+    data() {
+        return {
+        }
+    }
+}
+</script>
+
 <style lang="sass">
 .navbar-inverse .navbar-toggler
   border-color: rgba(255, 255, 255, 0.67)
-
-
 </style>
