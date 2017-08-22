@@ -6,5 +6,6 @@ namespace OnyxSAT.Models
     public class Attendance
     {
 
+
     }
 }
