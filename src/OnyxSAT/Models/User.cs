@@ -6,20 +6,20 @@ namespace OnyxSAT.Models
     public class User
     {
         //this should work
-        public int userId { get; set; }
+        public int UserId { get; set; }
         [StringLength(50)]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
         [StringLength(50)]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public date dateOfBirth { get; set; }
+        public date DateOfBirth { get; set; }
         [StringLength(10)]
-        public string gender { get; set; }
+        public string Gender { get; set; }
         public int StudentId { get; set; }
         public int TeacherId { get; set; }
-        public int mobile { get; set; }
+        public int Mobile { get; set; }
         [StringLength(50)]
-        email string { get; set; } 
+        public string Email { get; set; } 
 
         public ICollection<UserRole> UserRoles { get; set; }
 
