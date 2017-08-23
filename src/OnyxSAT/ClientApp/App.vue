@@ -16,10 +16,4 @@ export default {
 }
 </script>
 
-<style lang="sass">
-body
-    padding-top: 5.5rem
-    
-button
-    cursor: pointer
-</style>
+<style src="./App.sass" lang="sass"/>
