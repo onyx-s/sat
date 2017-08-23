@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3c3a4a2f257e354172df"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fae02499c9cd32971464"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13760,10 +13760,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   data: function data() {
-    return {
-      email: '',
-      password: ''
-    };
+    return {};
   },
 
   methods: {}
@@ -13775,66 +13772,10 @@ exports.default = {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h2', [_vm._v("Log In")]), _vm._v(" "), _c('form', {
-    attrs: {
-      "method": "post"
-    }
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('router-link', {
-    attrs: {
-      "href": "/account/forgotpassword"
-    }
-  }, [_vm._v("Forgot your password?")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-primary",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Submit")])], 1)])
+  return _vm._m(0)
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('fieldset', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "email"
-    }
-  }, [_vm._v("Email")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "email",
-      "name": "email",
-      "placeholder": "Email"
-    }
-  })])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('fieldset', {
-    staticClass: "form-group"
-  }, [_c('label', {
-    attrs: {
-      "for": "password"
-    }
-  }, [_vm._v("Password")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "name": "password",
-      "placeholder": "Password"
-    }
-  })])
-},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "form-check"
-  }, [_c('label', {
-    staticClass: "form-check-label",
-    attrs: {
-      "for": "rememberMe"
-    }
-  }, [_c('input', {
-    staticClass: "form-check-input",
-    attrs: {
-      "type": "checkbox",
-      "name": "rememberMe"
-    }
-  })])])
+  return _c('div', [_c('h2', [_vm._v("Log In")])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
