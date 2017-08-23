@@ -12,6 +12,9 @@
           <router-link tag="li" to="/users" class="nav-item">
             <a class="nav-link">Users</a>
           </router-link>
+          <router-link tag="li" to="/example" class="nav-item">
+            <a class="nav-link">ApiExample</a>
+          </router-link>
           <router-link tag="li" to="/login" class="nav-item">
             <a class="nav-link">Login</a>
           </router-link>

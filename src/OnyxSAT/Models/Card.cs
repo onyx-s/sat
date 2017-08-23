@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnyxSAT.Models
 {
     public class Card
     {
-    //Primary Key
-     [StringLength(16)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int CardNo { get; set; }
 
-     [Key]
-     public string CardNo { get; set;}
-     public string DateTimeID { get; set;}
-     public virtual ICollection<Attendance> Attendances { get; set; }
+        public ICollection<Attendance> Attendances { get; set; }
+
+        public Student Student { get; set; } 
     }
 }

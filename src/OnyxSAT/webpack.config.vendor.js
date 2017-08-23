@@ -12,6 +12,7 @@ module.exports = (env) => {
             vendor: [
                 'bootstrap',
                 'bootstrap/dist/css/bootstrap.css',
+                'popper.js',                
                 'tether',                
                 'event-source-polyfill',
                 'isomorphic-fetch',
@@ -36,7 +37,7 @@ module.exports = (env) => {
         },
         plugins: [
             new ExtractTextPlugin('vendor.css'),
-            new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', Tether: 'tether'}), // Maps these identifiers to the jQuery and tether packages (because Bootstrap expects them to be global variables)
+            new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery', Tether: 'tether', Popper: 'popper.js'}), // Maps these identifiers to the jQuery and tether packages (because Bootstrap expects them to be global variables)
             new webpack.DefinePlugin({
                 'process.env.NODE_ENV': isDevBuild ? '"development"' : '"production"'
             }),

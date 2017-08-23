@@ -14,9 +14,19 @@ namespace OnyxSAT.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+             builder.Entity<UserRole>()
+                .HasKey(c => new { c.UserId, c.RoleId });    
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Card> Cards { get; set; }
+        public DbSet<Class> Classes { get; set; }
     }
 }
