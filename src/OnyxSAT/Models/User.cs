@@ -19,13 +19,12 @@ namespace OnyxSAT.Models
         [StringLength(10)]        
         [RegularExpression(@"^04\d{8}$", ErrorMessage = "That's not a valid mobile number")] 
         public string Mobile { get; set; }
-        [StringLength(50)]
-        public string Gender { get; set; }
-        [Required]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+        [MaxLength(20)]                
+        public int? StudentId { get; set; }
+        [MaxLength(20)]
+        public int? StaffId { get; set; }
         
-
         public ICollection<UserRole> UserRoles { get; set; }
+        public ICollection<Card> Cards { get; set; }
     }
 }
