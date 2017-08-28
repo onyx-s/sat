@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Log In</h2>
+    <h2 class="display-4">Log In</h2>
   </div>
 </template>
 
@@ -16,5 +16,4 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
 </style>

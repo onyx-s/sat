@@ -5,14 +5,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using Microsoft.EntityFrameworkCore.ValueGeneration;
 using OnyxSAT.Data;
 using System;
 
 namespace OnyxSAT.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170823075009_Initial")]
+    [Migration("20170828061216_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,37 +40,13 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.Property<int>("CardNo");
 
-                    b.Property<int?>("StudentUserId");
+                    b.Property<int>("UserId");
 
                     b.HasKey("CardNo");
 
-                    b.HasIndex("StudentUserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Cards");
-                });
-
-            modelBuilder.Entity("OnyxSAT.Models.Class", b =>
-                {
-                    b.Property<int>("ClassId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("DayOfWeek")
-                        .IsRequired();
-
-                    b.Property<DateTime>("EndTime");
-
-                    b.Property<string>("Location")
-                        .IsRequired();
-
-                    b.Property<DateTime>("StartTime");
-
-                    b.Property<int?>("TeacherUserId");
-
-                    b.HasKey("ClassId");
-
-                    b.HasIndex("TeacherUserId");
-
-                    b.ToTable("Classes");
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.Role", b =>
@@ -94,17 +69,11 @@ namespace OnyxSAT.Data.Migrations
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired();
-
                     b.Property<string>("Email")
                         .IsRequired();
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(50);
-
-                    b.Property<string>("Gender")
                         .HasMaxLength(50);
 
                     b.Property<string>("LastName")
@@ -114,14 +83,15 @@ namespace OnyxSAT.Data.Migrations
                     b.Property<string>("Mobile")
                         .HasMaxLength(10);
 
-                    b.Property<string>("Password")
-                        .IsRequired();
+                    b.Property<int?>("StaffId")
+                        .HasMaxLength(20);
+
+                    b.Property<int?>("StudentId")
+                        .HasMaxLength(20);
 
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("User");
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.UserRole", b =>
@@ -137,28 +107,6 @@ namespace OnyxSAT.Data.Migrations
                     b.ToTable("UserRoles");
                 });
 
-            modelBuilder.Entity("OnyxSAT.Models.Student", b =>
-                {
-                    b.HasBaseType("OnyxSAT.Models.User");
-
-                    b.Property<int>("StudentId");
-
-                    b.ToTable("Student");
-
-                    b.HasDiscriminator().HasValue("Student");
-                });
-
-            modelBuilder.Entity("OnyxSAT.Models.Teacher", b =>
-                {
-                    b.HasBaseType("OnyxSAT.Models.User");
-
-                    b.Property<int>("StaffId");
-
-                    b.ToTable("Teacher");
-
-                    b.HasDiscriminator().HasValue("Teacher");
-                });
-
             modelBuilder.Entity("OnyxSAT.Models.Attendance", b =>
                 {
                     b.HasOne("OnyxSAT.Models.Card", "Card")
@@ -169,16 +117,10 @@ namespace OnyxSAT.Data.Migrations
 
             modelBuilder.Entity("OnyxSAT.Models.Card", b =>
                 {
-                    b.HasOne("OnyxSAT.Models.Student", "Student")
+                    b.HasOne("OnyxSAT.Models.User", "User")
                         .WithMany("Cards")
-                        .HasForeignKey("StudentUserId");
-                });
-
-            modelBuilder.Entity("OnyxSAT.Models.Class", b =>
-                {
-                    b.HasOne("OnyxSAT.Models.Teacher", "Teacher")
-                        .WithMany("Classes")
-                        .HasForeignKey("TeacherUserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.UserRole", b =>
