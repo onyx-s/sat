@@ -71,9 +71,9 @@ export default {
 
 .add-student {
     display: inline;
-    position: relative;
+    position: inherit;
     width: 150px;
-    align-self: right;
+    align-self: left;
 }
 
 .display-4 {
