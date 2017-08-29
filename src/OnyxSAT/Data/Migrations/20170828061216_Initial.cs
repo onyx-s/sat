@@ -27,17 +27,14 @@ namespace OnyxSAT.Data.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    StudentId = table.Column<int>(type: "int", nullable: true),
-                    StaffId = table.Column<int>(type: "int", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Gender = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Mobile = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    StaffId = table.Column<int>(type: "int", maxLength: 20, nullable: true),
+                    StudentId = table.Column<int>(type: "int", maxLength: 20, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -49,40 +46,17 @@ namespace OnyxSAT.Data.Migrations
                 columns: table => new
                 {
                     CardNo = table.Column<int>(type: "int", nullable: false),
-                    StudentUserId = table.Column<int>(type: "int", nullable: true)
+                    UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Cards", x => x.CardNo);
                     table.ForeignKey(
-                        name: "FK_Cards_Users_StudentUserId",
-                        column: x => x.StudentUserId,
+                        name: "FK_Cards_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Classes",
-                columns: table => new
-                {
-                    ClassId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    DayOfWeek = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TeacherUserId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Classes", x => x.ClassId);
-                    table.ForeignKey(
-                        name: "FK_Classes_Users_TeacherUserId",
-                        column: x => x.TeacherUserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -134,14 +108,9 @@ namespace OnyxSAT.Data.Migrations
                 column: "CardNo");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cards_StudentUserId",
+                name: "IX_Cards_UserId",
                 table: "Cards",
-                column: "StudentUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Classes_TeacherUserId",
-                table: "Classes",
-                column: "TeacherUserId");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_RoleId",
@@ -153,9 +122,6 @@ namespace OnyxSAT.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Attendances");
-
-            migrationBuilder.DropTable(
-                name: "Classes");
 
             migrationBuilder.DropTable(
                 name: "UserRoles");
