@@ -60,7 +60,11 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
+<<<<<<< HEAD
 /******/ 	var hotCurrentHash = "fae02499c9cd32971464"; // eslint-disable-line no-unused-vars
+=======
+/******/ 	var hotCurrentHash = "de715814be2937baf765"; // eslint-disable-line no-unused-vars
+>>>>>>> master
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13775,7 +13779,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   return _vm._m(0)
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+<<<<<<< HEAD
   return _c('div', [_c('h2', [_vm._v("Log In")])])
+=======
+  return _c('div', [_c('h2', {
+    staticClass: "display-4"
+  }, [_vm._v("Log In")])])
+>>>>>>> master
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
@@ -14273,10 +14283,8 @@ exports.default = {
       _vue2.default.axios.post('/api/users/', {
         firstName: this.user.firstName,
         lastName: this.user.lastName,
-        gender: this.user.gender,
         email: this.user.email,
-        mobile: this.user.mobile,
-        password: this.user.password
+        mobile: this.user.mobile
       }).then(function (response) {
         _this.getUsers();
         _this.user = {};
@@ -14314,12 +14322,12 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._v("Users")]), _vm._v(" "), _c('table', {
     staticClass: "table table-bordered mb-5"
   }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.users), function(u) {
-    return _c('tr', [_c('td', [_vm._v(_vm._s(((u.firstName) + "  " + (u.lastName))))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.gender))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.email))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.mobile))]), _vm._v(" "), _c('td', [_c('router-link', {
+    return (_vm.users) ? _c('tr', [_c('td', [_vm._v(_vm._s(((u.firstName) + "  " + (u.lastName))))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.email))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.mobile))]), _vm._v(" "), _c('td', [_c('router-link', {
       attrs: {
         "to": u.userId.toString(),
         "append": ""
       }
-    }, [_vm._v(_vm._s(u.userId))])], 1)])
+    }, [_vm._v(_vm._s(u.userId))])], 1)]) : _vm._e()
   }))])]), _vm._v(" "), _c('section', {
     staticClass: "row w-100 d-flex align-items-center flex-column"
   }, [_c('h2', {
@@ -14444,62 +14452,6 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         _vm.user.mobile = $event.target.value
       }
     }
-  })]), _vm._v(" "), _c('fieldset', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("Gender")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "validate",
-      rawName: "v-validate",
-      value: ('required'),
-      expression: "'required'"
-    }, {
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.user.gender),
-      expression: "user.gender"
-    }],
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "name": "gender"
-    },
-    domProps: {
-      "value": (_vm.user.gender)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.user.gender = $event.target.value
-      }
-    }
-  })]), _vm._v(" "), _c('fieldset', {
-    staticClass: "form-group"
-  }, [_c('label', [_vm._v("Password")]), _vm._v(" "), _c('input', {
-    directives: [{
-      name: "validate",
-      rawName: "v-validate",
-      value: ('required'),
-      expression: "'required'"
-    }, {
-      name: "model",
-      rawName: "v-model",
-      value: (_vm.user.password),
-      expression: "user.password"
-    }],
-    staticClass: "form-control",
-    attrs: {
-      "type": "password",
-      "name": "password"
-    },
-    domProps: {
-      "value": (_vm.user.password)
-    },
-    on: {
-      "input": function($event) {
-        if ($event.target.composing) { return; }
-        _vm.user.password = $event.target.value
-      }
-    }
   })]), _vm._v(" "), _c('button', {
     staticClass: "btn btn-primary",
     attrs: {
@@ -14510,7 +14462,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('thead', {
     staticClass: "thead-default"
-  }, [_c('tr', [_c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Gender")]), _vm._v(" "), _c('th', [_vm._v("Email")]), _vm._v(" "), _c('th', [_vm._v("Mobile")]), _vm._v(" "), _c('th', [_vm._v("ID")])])])
+  }, [_c('tr', [_c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Email")]), _vm._v(" "), _c('th', [_vm._v("Mobile")]), _vm._v(" "), _c('th', [_vm._v("ID")])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }

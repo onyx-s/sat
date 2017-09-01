@@ -27,6 +27,5 @@ namespace OnyxSAT.Data
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Card> Cards { get; set; }
-        public DbSet<Class> Classes { get; set; }
     }
 }
