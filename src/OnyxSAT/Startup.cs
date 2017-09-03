@@ -24,6 +24,12 @@ namespace OnyxSAT
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+services.AddAuthentication().AddGoogle(googleOptions =>
+{
+    googleOptions.ClientId = Configuration["474682657403-d3tmb5a13darj912bge2tjd8rirmrbvf.apps.googleusercontent.com"];
+    googleOptions.ClientSecret = Configuration["YYFdzz76GRGnq1XJ5Siz2m9Z"];
+});
+            
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -31,6 +37,9 @@ namespace OnyxSAT
                 .AddJsonOptions(
                     options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
+
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -47,7 +56,7 @@ namespace OnyxSAT
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
+;
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
