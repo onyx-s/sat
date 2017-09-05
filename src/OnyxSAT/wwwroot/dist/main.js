@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fae02499c9cd32971464"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5d788f2754ffec72ba01"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13775,7 +13775,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   return _vm._m(0)
 }
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h2', [_vm._v("Log In")])])
+  return _c('div', [_c('h2', [_vm._v("Log In")]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 col-md-offset-2"
+  }, [_c('section', [_c('h4', [_vm._v("Use another service to log in.")]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('button', {
+    attrs: {
+      "onclick": "window.location='https://accounts.google.com/signin/oauth/oauthchooseaccount?client_id=474682657403-d3tmb5a13darj912bge2tjd8rirmrbvf.apps.googleusercontent.com&as=-66191bf60daeeb16&destination=https%3A%2F%2Flocalhost%3A44380&approval_state=!ChRTZlgxcmpidEtlN3JWZkp3MEp3eRIfVTltTGtZVGl3eFVYTUlqOWRic2JOcGJFekRVRDVSVQ%E2%88%99AHw7d_cAAAAAWa9zIE3jsigpb5rpMUuZze1EDnN_nE3E&xsrfsig=AHgIfE-imgB9v77OIu3GFS_tA0vyM7soGA&flowName=GeneralOAuthFlow'"
+    }
+  }, [_vm._v("Google")])])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
