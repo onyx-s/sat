@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2fe72df3c55e93fd01a2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f47ee9529a89bdf15a71"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -14190,7 +14190,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "align-self-start w-100"
   }, [_c('h3', {
     staticClass: "display-4 mb-3"
-  }, [_vm._v("Card" + _vm._s(_vm.user.cards.length > 1 ? 's' : ''))]), _vm._v(" "), (_vm.user.cards.length == 1) ? _c('p', [_vm._v(_vm._s(_vm.user.cards[0].cardNo))]) : _c('ul', {
+  }, [_vm._v("Card" + _vm._s(_vm.user.cards.length > 1 ? 's' : ''))]), _vm._v(" "), _c('ul', {
     staticClass: "list-group"
   }, _vm._l((_vm.user.cards), function(card) {
     return _c('li', {
@@ -14319,17 +14319,21 @@ exports.default = {
     addUser: function addUser() {
       var _this = this;
 
-      _vue2.default.axios.post('/api/users/', {
-        firstName: this.user.firstName,
-        lastName: this.user.lastName,
-        email: this.user.email,
-        mobile: this.user.mobile
-      }).then(function (response) {
-        _this.getUsers();
-        _this.user = {};
-      }).catch(function (error) {
-        return console.log(error);
-      });
+      if (!this.errors.all().length) {
+        _vue2.default.axios.post('/api/users/', {
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+          email: this.user.email,
+          mobile: this.user.mobile,
+          staffId: this.user.staffId || null,
+          studentId: this.user.studentId || null
+        }).then(function (response) {
+          _this.getUsers();
+          _this.user = {};
+        }).catch(function (error) {
+          return console.log(error);
+        });
+      }
     },
     getUsers: function getUsers() {
       var _this2 = this;
@@ -14361,18 +14365,23 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._v("Users")]), _vm._v(" "), _c('table', {
     staticClass: "table table-bordered mb-5"
   }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.users), function(u) {
-    return (_vm.users) ? _c('tr', [_c('td', [_vm._v(_vm._s(((u.firstName) + "  " + (u.lastName))))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.email))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.mobile))]), _vm._v(" "), _c('td', [_c('router-link', {
+    return (_vm.users) ? _c('tr', [_c('td', [_c('router-link', {
       attrs: {
         "to": u.userId.toString(),
         "append": ""
       }
-    }, [_vm._v(_vm._s(u.userId))])], 1)]) : _vm._e()
+    }, [_vm._v(_vm._s(u.userId))])], 1), _vm._v(" "), _c('td', [_vm._v(_vm._s(((u.firstName) + " " + (u.lastName))))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.email))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.mobile))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.staffId))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(u.studentId))])]) : _vm._e()
   }))])]), _vm._v(" "), _c('section', {
     staticClass: "row w-100 d-flex align-items-center flex-column"
   }, [_c('h2', {
     staticClass: "display-4 mb-3"
-  }, [_vm._v("Add a User")]), _vm._v(" "), _c('form', {
+  }, [_vm._v("Add a User")]), _vm._v(" "), (_vm.errors.any()) ? _c('ul', _vm._l((_vm.errors.all()), function(error) {
+    return _c('li', [_vm._v(" " + _vm._s(error))])
+  })) : _vm._e(), _vm._v(" "), _c('form', {
     staticClass: "d-flex flex-column w-100 mb-3",
+    attrs: {
+      "novalidate": ""
+    },
     on: {
       "submit": function($event) {
         $event.preventDefault();
@@ -14441,8 +14450,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     directives: [{
       name: "validate",
       rawName: "v-validate",
-      value: ('required'),
-      expression: "'required'"
+      value: ('required|email'),
+      expression: "'required|email'"
     }, {
       name: "model",
       rawName: "v-model",
@@ -14469,8 +14478,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     directives: [{
       name: "validate",
       rawName: "v-validate",
-      value: ('required'),
-      expression: "'required'"
+      value: ({
+        rules: {
+          required: true,
+          regex: /^04\d{8}$/
+        }
+      }),
+      expression: "{ rules: { required: true, regex: /^04\\d{8}$/} }"
     }, {
       name: "model",
       rawName: "v-model",
@@ -14491,6 +14505,52 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         _vm.user.mobile = $event.target.value
       }
     }
+  })]), _vm._v(" "), _c('fieldset', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Staff Id")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.user.staffId),
+      expression: "user.staffId"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "name": "staffId"
+    },
+    domProps: {
+      "value": (_vm.user.staffId)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.user.staffId = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('fieldset', {
+    staticClass: "form-group"
+  }, [_c('label', [_vm._v("Student Id")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.user.studentId),
+      expression: "user.studentId"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "name": "studentId"
+    },
+    domProps: {
+      "value": (_vm.user.studentId)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.user.studentId = $event.target.value
+      }
+    }
   })]), _vm._v(" "), _c('button', {
     staticClass: "btn btn-primary",
     attrs: {
@@ -14501,7 +14561,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('thead', {
     staticClass: "thead-default"
-  }, [_c('tr', [_c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Email")]), _vm._v(" "), _c('th', [_vm._v("Mobile")]), _vm._v(" "), _c('th', [_vm._v("ID")])])])
+  }, [_c('tr', [_c('th', [_vm._v("User ID")]), _vm._v(" "), _c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Email")]), _vm._v(" "), _c('th', [_vm._v("Mobile")]), _vm._v(" "), _c('th', [_vm._v("Staff ID")]), _vm._v(" "), _c('th', [_vm._v("Student ID")])])])
 }]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }

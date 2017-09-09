@@ -26,8 +26,7 @@
         </table>
         <div v-if="user.cards.length" class="align-self-start w-100">
           <h3 class="display-4 mb-3">Card{{ user.cards.length > 1 ? 's' : '' }}</h3>
-          <p v-if="user.cards.length == 1">{{ user.cards[0].cardNo }}</p>
-          <ul v-else class="list-group">
+          <ul class="list-group">
             <li v-for="card in user.cards" class="list-group-item">{{ card.cardNo }}</li>
           </ul>
         </div>
