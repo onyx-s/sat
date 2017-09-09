@@ -11,62 +11,57 @@ using OnyxSAT.Models;
 namespace OnyxSAT.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Users")]
-    public class UsersController : Controller
+    [Route("api/Cards")]
+    public class CardsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public UsersController(ApplicationDbContext context)
+        public CardsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Users
+        // GET: api/Cards
         [HttpGet]
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<Card> GetCards()
         {
-            return _context.Users;
+            return _context.Cards;
         }
 
-        // GET: api/Users/5
+        // GET: api/Cards/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser([FromRoute] int id)
+        public async Task<IActionResult> GetCard([FromRoute] string id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users
-                .Include(u => u.UserRoles)
-                    .ThenInclude(uR => uR.Role)
-                .Include(u => u.Cards)
-                .AsNoTracking()
-                .SingleOrDefaultAsync(m => m.UserId == id);
+            var card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == id);
 
-            if (user == null)
+            if (card == null)
             {
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(card);
         }
 
-        // PUT: api/Users/5
+        // PUT: api/Cards/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
+        public async Task<IActionResult> PutCard([FromRoute] string id, [FromBody] Card card)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.UserId)
+            if (id != card.CardNo)
             {
                 return BadRequest();
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            _context.Entry(card).State = EntityState.Modified;
 
             try
             {
@@ -74,7 +69,7 @@ namespace OnyxSAT.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!CardExists(id))
                 {
                     return NotFound();
                 }
@@ -87,45 +82,45 @@ namespace OnyxSAT.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        // POST: api/Cards
         [HttpPost]
-        public async Task<IActionResult> PostUser([FromBody] User user)
+        public async Task<IActionResult> PostCard([FromBody] Card card)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Users.Add(user);
+            _context.Cards.Add(card);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+            return CreatedAtAction("GetCard", new { id = card.CardNo }, card);
         }
 
-        // DELETE: api/Users/5
+        // DELETE: api/Cards/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser([FromRoute] int id)
+        public async Task<IActionResult> DeleteCard([FromRoute] string id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.UserId == id);
-            if (user == null)
+            var card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == id);
+            if (card == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
+            _context.Cards.Remove(card);
             await _context.SaveChangesAsync();
 
-            return Ok(user);
+            return Ok(card);
         }
 
-        private bool UserExists(int id)
+        private bool CardExists(string id)
         {
-            return _context.Users.Any(e => e.UserId == id);
+            return _context.Cards.Any(e => e.CardNo == id);
         }
     }
 }
