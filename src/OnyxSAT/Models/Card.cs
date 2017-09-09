@@ -8,8 +8,7 @@ namespace OnyxSAT.Models
     public class Card
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CardNo { get; set; }
+        public string CardNo { get; set; }
 
         public ICollection<Attendance> Attendances { get; set; }
 

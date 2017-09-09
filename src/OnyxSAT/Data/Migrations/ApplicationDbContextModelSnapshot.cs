@@ -24,7 +24,7 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.Property<DateTime>("DateTime");
 
-                    b.Property<int>("CardNo");
+                    b.Property<string>("CardNo");
 
                     b.Property<bool>("Verified");
 
@@ -37,7 +37,8 @@ namespace OnyxSAT.Data.Migrations
 
             modelBuilder.Entity("OnyxSAT.Models.Card", b =>
                 {
-                    b.Property<int>("CardNo");
+                    b.Property<string>("CardNo")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("UserId");
 
@@ -82,10 +83,10 @@ namespace OnyxSAT.Data.Migrations
                     b.Property<string>("Mobile")
                         .HasMaxLength(10);
 
-                    b.Property<int?>("StaffId")
+                    b.Property<string>("StaffId")
                         .HasMaxLength(20);
 
-                    b.Property<int?>("StudentId")
+                    b.Property<string>("StudentId")
                         .HasMaxLength(20);
 
                     b.HasKey("UserId");
@@ -110,8 +111,7 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.HasOne("OnyxSAT.Models.Card", "Card")
                         .WithMany("Attendances")
-                        .HasForeignKey("CardNo")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CardNo");
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.Card", b =>
