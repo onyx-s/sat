@@ -1,6 +1,6 @@
 <template>
     <div class="container d-flex flex-column">
-        <h1 class="display-4">User Details</h1>
+        <h1>User Details</h1>
     </div>
 </template>
 <script>
