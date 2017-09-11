@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div class="container d-flex flex-column">
-        <h1>User Details</h1>
-    </div>
-=======
   <div class="container d-flex flex-column align-items-center">
     <template v-if="Object.keys(user).length">
       <h1 class="display-4 mb-4">{{ `${user.firstName} ${user.lastName}` }}</h1>
@@ -39,7 +34,6 @@
     </template>
     <not-found v-if="userNotFound"></not-found>
   </div>
->>>>>>> master
 </template>
 <script>
 import Vue from 'vue'

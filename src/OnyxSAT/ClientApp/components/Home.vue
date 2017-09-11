@@ -1,14 +1,9 @@
 <template>
-<<<<<<< HEAD
     <div style="text-align:center" class="home align-items-center container">
         <h1>ONYX</h1>
         <h2>Attendence Tracker</h2>
         <h3>Swinburne University</h3>
         <h4>Developed by ONYX</h4>
-=======
-    <div class="d-flex align-items-center justify-content-center">
-        <h1 class="display-1">Home Page</h1>
->>>>>>> master
     </div>
 </template>
 <style scoped> 

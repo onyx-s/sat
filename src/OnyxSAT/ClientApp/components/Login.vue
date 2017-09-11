@@ -1,12 +1,7 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <h1>Log In</h1>
-=======
   <div class="container d-flex flex-column align-items-center justify-content-center">
     <h1 class="display-4 mb-4 mt-4">Log In</h1>
     <a href="/google/login" class="display-4 text-center w-100"><img src="../assets/img/google.jpg"></img>oogle</a>
->>>>>>> master
   </div>
 </template>
 

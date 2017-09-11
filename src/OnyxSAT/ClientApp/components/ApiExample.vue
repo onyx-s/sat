@@ -15,17 +15,11 @@
           </tr>
         </thead>
         <tbody>
-<<<<<<< HEAD
-          <tr v-for="u in users">
-            <td>{{ `${u.firstName}  ${u.lastName}` }}</td>
-            <td>{{ u.gender }}</td>
-=======
           <tr v-if="users" v-for="u in users">
             <td>
               <router-link :to="u.userId.toString()" append>{{ u.userId }}</router-link>
             </td>
             <td>{{ `${u.firstName} ${u.lastName}` }}</td>
->>>>>>> master
             <td>{{ u.email }}</td>
             <td>{{ u.mobile }}</td>
             <td>{{ u.staffId }}</td>
@@ -90,19 +84,6 @@ export default {
   },
   methods: {
     addUser() {
-<<<<<<< HEAD
-      Vue.axios.post('/api/users/', {
-        firstName: this.user.firstName,
-        lastName: this.user.lastName,
-        gender: this.user.gender,
-        email: this.user.email,
-        mobile: this.user.mobile,
-        password: this.user.password,
-      })
-        .then((response) => {
-          this.getUsers();
-          this.user = {};
-=======
       if (!this.errors.all().length) {
         Vue.axios.post('/api/users/', {
           firstName: this.user.firstName,
@@ -111,7 +92,6 @@ export default {
           mobile: this.user.mobile,
           staffId: this.user.staffId || null,
           studentId: this.user.studentId || null
->>>>>>> master
         })
           .then((response) => {
             this.getUsers();

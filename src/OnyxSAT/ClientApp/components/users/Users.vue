@@ -42,7 +42,6 @@
 
 <script>
 import Alert from '../Alert'
-
 export default {
     data() {
         return {
@@ -60,7 +59,6 @@ export default {
     created() {
         if (this.$route.params.alert)
             this.alert = this.$route.params.alert;
-
         this.getUsers();
     },
     components: {
@@ -73,12 +71,10 @@ export default {
 .dropdown {
     display: inline;
 }
-
 .content-row {
     display: inline;
     padding-bottom: 15px;
 }
-
 .add-student {
     display: inline;
     position: relative;
