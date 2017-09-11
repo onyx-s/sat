@@ -33,8 +33,8 @@ namespace OnyxSAT.Data.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Mobile = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    StaffId = table.Column<int>(type: "int", maxLength: 20, nullable: true),
-                    StudentId = table.Column<int>(type: "int", maxLength: 20, nullable: true)
+                    StaffId = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    StudentId = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -45,7 +45,7 @@ namespace OnyxSAT.Data.Migrations
                 name: "Cards",
                 columns: table => new
                 {
-                    CardNo = table.Column<int>(type: "int", nullable: false),
+                    CardNo = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -88,7 +88,7 @@ namespace OnyxSAT.Data.Migrations
                 columns: table => new
                 {
                     DateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CardNo = table.Column<int>(type: "int", nullable: false),
+                    CardNo = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Verified = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -99,7 +99,7 @@ namespace OnyxSAT.Data.Migrations
                         column: x => x.CardNo,
                         principalTable: "Cards",
                         principalColumn: "CardNo",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
