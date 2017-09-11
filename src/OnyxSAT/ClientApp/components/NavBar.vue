@@ -6,17 +6,17 @@
       <router-link to="/" class="navbar-brand">Onyx</router-link>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
-          <router-link tag="li" to="/" class="nav-item">
-            <a class="nav-link">Home<span class="sr-only">(current)</span></a>
+          <!-- <router-link tag="li" to="/" class="nav-item"> -->
+          <!-- <a class="nav-link">Home<span class="sr-only">(current)</span></a> -->
           </router-link>
           <router-link tag="li" to="/users" class="nav-item">
-            <a class="nav-link">Users</a>
+          <a class="nav-link">Users</a>
           </router-link>
-          <router-link tag="li" to="/example" class="nav-item">
-            <a class="nav-link">ApiExample</a>
+          <!-- <router-link tag="li" to="/example" class="nav-item"> -->
+          <!-- <a class="nav-link">ApiExample</a> -->
           </router-link>
           <router-link tag="li" to="/login" class="nav-item">
-            <a class="nav-link">Login</a>
+          <a class="nav-link">Login</a>
           </router-link>
         </ul>
       </div>

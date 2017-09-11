@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column align-items-center container">
-    <h1 class="display-4">Add a User</h1>
+    <h1>Add a User</h1>
     <section class="row w-100 d-flex align-items-center flex-column">
       <form @submit.prevent="addUser" class="d-flex flex-column w-100 mb-3">
         <fieldset class="form-group">
@@ -20,34 +20,30 @@
           <input type="text" name="mobile" class="form-control" v-validate="'required'" v-model="user.mobile" />
         </fieldset>
         <br>
-        <button type="submit" class="btn btn-defualt">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </section>
   </div>
 </template>
 <script>
-import Vue from 'vue'
-
 export default {
   data() {
     return {
-      user: {},
-      users: []
+      user: {}
     }
   },
   methods: {
     addUser() {
-      Vue.axios.post('/api/users/', {
+      this.axios.post('/api/users/', {
         firstName: this.user.firstName,
         lastName: this.user.lastName,
         email: this.user.email,
         mobile: this.user.mobile,
       })
-      .then((response) => {
-        this.getUsers();
-        this.user = {};
-      })
-      .catch(error => console.log(error));
+        .then((response) => {
+          this.$router.push({ name: 'users', params: { alert: 'User Added' } });
+        })
+        .catch(error => console.log(error));
     }
   }
 }
