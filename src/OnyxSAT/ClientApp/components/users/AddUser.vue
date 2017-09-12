@@ -1,6 +1,9 @@
 <template>
   <div class="d-flex flex-column align-items-center container">
     <h1>Add a User</h1>
+    <ul v-if="errors.any()">
+      <li v-for="error in errors.all()"> {{ error }}</li>
+    </ul>
     <section class="row w-100 d-flex align-items-center flex-column">
       <form @submit.prevent="addUser" class="d-flex flex-column w-100 mb-3">
         <fieldset class="form-group">
@@ -17,7 +20,7 @@
         </fieldset>
         <fieldset class="form-group">
           <label>Mobile</label>
-          <input type="text" name="mobile" class="form-control" v-validate="'required'" v-model="user.mobile" />
+          <input type="text" name="mobile" class="form-control" v-validate="{ rules: { required: true, regex: /^04\d{8}$/} }" v-model="user.mobile" />
         </fieldset>
         <br>
         <button type="submit" class="btn btn-default">Submit</button>
