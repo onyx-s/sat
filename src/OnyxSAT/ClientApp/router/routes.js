@@ -4,6 +4,7 @@ import Login from '@/components/Login';
 import Users from '@/components/users/Users';
 import AddUser from '@/components/users/AddUser';
 import UserDetails from '@/components/users/UserDetails';
+import Attendances from '@/components/Attendances';
 
 import Example from '@/components/ApiExample';
 
@@ -14,5 +15,6 @@ export default [
     { path: '/users', name: 'users', component: Users },
     { path: '/users/add', component: AddUser },
     { path: '/users/:id', component: UserDetails },    
+    { path: '/attendances', component: Attendances },    
     { path: '/example', component: Example },    
 ]

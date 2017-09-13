@@ -11,7 +11,7 @@ using System;
 namespace OnyxSAT.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170906071730_Initial")]
+    [Migration("20170913083712_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,9 +27,9 @@ namespace OnyxSAT.Data.Migrations
 
                     b.Property<string>("CardNo");
 
-                    b.Property<bool>("Verified");
+                    b.Property<bool?>("Verified");
 
-                    b.HasKey("DateTime");
+                    b.HasKey("DateTime", "CardNo");
 
                     b.HasIndex("CardNo");
 
@@ -112,7 +112,8 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.HasOne("OnyxSAT.Models.Card", "Card")
                         .WithMany("Attendances")
-                        .HasForeignKey("CardNo");
+                        .HasForeignKey("CardNo")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.Card", b =>
