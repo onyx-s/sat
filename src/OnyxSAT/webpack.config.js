@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const bundleOutputDir = './wwwroot/dist';
 
 module.exports = (env) => {
@@ -41,7 +40,6 @@ module.exports = (env) => {
             publicPath: '/dist/'
         },
         plugins: [
-            new CheckerPlugin(),   
             new ExtractTextPlugin({
                 filename: 'style.css',
                 disable: isDevBuild

@@ -23,21 +23,26 @@ namespace OnyxSAT.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public IEnumerable<User> GetUser()
+        public IEnumerable<User> GetUsers()
         {
-            return _context.User;
+            return _context.Users;
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser([FromRoute] string id)
+        public async Task<IActionResult> GetUser([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.User.SingleOrDefaultAsync(m => m.Id == id);
+            var user = await _context.Users
+                .Include(u => u.UserRoles)
+                    .ThenInclude(uR => uR.Role)
+                .Include(u => u.Cards)
+                .AsNoTracking()
+                .SingleOrDefaultAsync(m => m.UserId == id);
 
             if (user == null)
             {
@@ -49,14 +54,14 @@ namespace OnyxSAT.Controllers
 
         // PUT: api/Users/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser([FromRoute] string id, [FromBody] User user)
+        public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.Id)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
@@ -91,36 +96,36 @@ namespace OnyxSAT.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.User.Add(user);
+            _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser([FromRoute] string id)
+        public async Task<IActionResult> DeleteUser([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.User.SingleOrDefaultAsync(m => m.Id == id);
+            var user = await _context.Users.SingleOrDefaultAsync(m => m.UserId == id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            _context.User.Remove(user);
+            _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
             return Ok(user);
         }
 
-        private bool UserExists(string id)
+        private bool UserExists(int id)
         {
-            return _context.User.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }
