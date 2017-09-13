@@ -88,18 +88,18 @@ namespace OnyxSAT.Data.Migrations
                 columns: table => new
                 {
                     DateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CardNo = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Verified = table.Column<bool>(type: "bit", nullable: false)
+                    CardNo = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Verified = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Attendances", x => x.DateTime);
+                    table.PrimaryKey("PK_Attendances", x => new { x.DateTime, x.CardNo });
                     table.ForeignKey(
                         name: "FK_Attendances_Cards_CardNo",
                         column: x => x.CardNo,
                         principalTable: "Cards",
                         principalColumn: "CardNo",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
