@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column align-items-center container">
     <section class="row w-100 d-flex align-items-center flex-column">
-      <h2 class="display-4 mb-4">Users</h2>
+      <h1 class="display-4 mb-4">Users</h1>
       <table class="table table-bordered mb-5">
         <thead class="thead-default">
           <tr>
@@ -73,8 +73,6 @@
 </template>
 
 <script>
-import Vue from 'vue'
-
 export default {
   data() {
     return {
@@ -85,7 +83,7 @@ export default {
   methods: {
     addUser() {
       if (!this.errors.all().length) {
-        Vue.axios.post('/api/users/', {
+        this.axios.post('/api/users/', {
           firstName: this.user.firstName,
           lastName: this.user.lastName,
           email: this.user.email,
@@ -101,9 +99,9 @@ export default {
       }
     },
     getUsers() {
-      Vue.axios.get('/api/users/')
+      this.axios.get('/api/users/')
         .then(response => this.users = response.data)
-        .catch(error => console.log(error))
+        .catch(error => console.log(error));
     }
   },
   created() {

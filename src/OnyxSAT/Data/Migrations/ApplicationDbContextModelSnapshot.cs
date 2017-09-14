@@ -26,9 +26,9 @@ namespace OnyxSAT.Data.Migrations
 
                     b.Property<string>("CardNo");
 
-                    b.Property<bool>("Verified");
+                    b.Property<bool?>("Verified");
 
-                    b.HasKey("DateTime");
+                    b.HasKey("DateTime", "CardNo");
 
                     b.HasIndex("CardNo");
 
@@ -111,7 +111,8 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.HasOne("OnyxSAT.Models.Card", "Card")
                         .WithMany("Attendances")
-                        .HasForeignKey("CardNo");
+                        .HasForeignKey("CardNo")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.Card", b =>
