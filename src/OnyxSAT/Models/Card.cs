@@ -12,7 +12,7 @@ namespace OnyxSAT.Models
 
         public ICollection<Attendance> Attendances { get; set; }
 
-        public int UserId { get; set; } 
+        public int? UserId { get; set; } 
         public User User { get; set; } 
     }
 }

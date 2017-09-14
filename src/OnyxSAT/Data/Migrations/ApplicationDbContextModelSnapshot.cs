@@ -40,7 +40,7 @@ namespace OnyxSAT.Data.Migrations
                     b.Property<string>("CardNo")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("UserId");
+                    b.Property<int?>("UserId");
 
                     b.HasKey("CardNo");
 
@@ -119,8 +119,7 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.HasOne("OnyxSAT.Models.User", "User")
                         .WithMany("Cards")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.UserRole", b =>
