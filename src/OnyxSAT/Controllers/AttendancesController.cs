@@ -132,6 +132,7 @@ namespace OnyxSAT.Controllers
             return Ok(attendance);
         }
 
+
         private bool AttendanceExists(DateTime id)
         {
             return _context.Attendances.Any(e => e.DateTime == id);
