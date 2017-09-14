@@ -15,12 +15,11 @@
           <router-link tag="li" to="/attendances" class="nav-item">
             <a class="nav-link">Attendances</a>
           </router-link>
-          <router-link tag="li" to="/example" class="nav-item">
-          <a class="nav-link">ApiExample</a>
-          </router-link>
+          <!--
           <router-link tag="li" to="/login" class="nav-item">
           <a class="nav-link">Login</a>
           </router-link>
+          -->
         </ul>
       </div>
     </nav>

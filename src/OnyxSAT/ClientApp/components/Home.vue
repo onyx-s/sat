@@ -9,6 +9,7 @@
 <style scoped>
 .home {
     text-align: center;
+    font-family: Book Antique;
 }
 h2 {
     color: gray;

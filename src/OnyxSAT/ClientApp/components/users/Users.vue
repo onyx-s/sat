@@ -1,8 +1,9 @@
 <template>
     <div class="container d-flex flex-column">
-        <h1>All Users</h1>
+        <h1 class="display-4 align-self-center">All Users</h1>
         <div class="content-row">
             <alert v-if="alert" :message="alert"></alert>
+            <!--
             <div class="dropdown">
                 <button class="btn-default dropdown-toggle" type="button" data-toggle="dropdown">Filter by block
                     <span class="caret"></span>
@@ -13,7 +14,8 @@
                     <li>C</li>
                 </ul>
             </div>
-            <router-link to="/users/add" tag="button" class="nav-item btn-default btn-md add-student">Add Student</router-link>
+            -->
+            <router-link to="/users/add" tag="button" class="nav-item btn-default btn-md add-student">Add User</router-link>
         </div>
         <table class="table table-bordered mb-5">
             <thead class="thead-default">

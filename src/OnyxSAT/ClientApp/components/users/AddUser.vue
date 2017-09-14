@@ -48,18 +48,20 @@ export default {
   },
   methods: {
     addUser() {
-      this.axios.post('/api/users/', {
-        firstName: this.user.firstName,
-        lastName: this.user.lastName,
-        email: this.user.email,
-        mobile: this.user.mobile,
-        staffId: this.user.staffId || null,
-        studentId: this.user.studentId || null
-      })
-        .then((response) => {
-          this.$router.push({ name: 'users', params: { alert: 'User Added' } });
+      if (!this.errors.all().length) {
+        this.axios.post('/api/users/', {
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+          email: this.user.email,
+          mobile: this.user.mobile,
+          staffId: this.user.staffId || null,
+          studentId: this.user.studentId || null
         })
-        .catch(error => console.log(error));
+          .then((response) => {
+            this.$router.push({ name: 'users', params: { alert: 'User Added' } });
+          })
+          .catch(error => console.log(error));
+      }
     }
   }
 }
