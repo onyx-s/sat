@@ -86,24 +86,19 @@ namespace OnyxSAT.Controllers
     [HttpPost]
     public async Task<IActionResult> PostAttendance([FromBody] Attendance attendance)
     {
-      Card card;
-
-      if (attendance.CardNo != null)
-      {
-        card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == attendance.CardNo);
-
-        if (card == null)
-        {
-          card = new Card { CardNo = attendance.CardNo };
-          
-          _context.Cards.Add(card);
-          await _context.SaveChangesAsync();
-        }
-      }
-
       if (!ModelState.IsValid)
       {
         return BadRequest(ModelState);
+      }
+
+      Card card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == attendance.CardNo);
+
+      if (card == null)
+      {
+        card = new Card { CardNo = attendance.CardNo };
+
+        _context.Cards.Add(card);
+        await _context.SaveChangesAsync();
       }
 
       _context.Attendances.Add(attendance);
