@@ -23,6 +23,11 @@ namespace OnyxSAT.Data
 
       builder.Entity<Attendance>()
          .HasKey(a => new { a.DateTime, a.CardNo });
+      
+      builder.Entity<Enrolment>()
+        .HasOne(e => e.Class)
+        .WithMany(c => c.Enrolments)
+        .OnDelete(DeleteBehavior.Restrict);
     }
 
     public DbSet<User> Users { get; set; }
@@ -30,5 +35,8 @@ namespace OnyxSAT.Data
     public DbSet<UserRole> UserRoles { get; set; }
     public DbSet<Attendance> Attendances { get; set; }
     public DbSet<Card> Cards { get; set; }
+    public DbSet<Class> Classes { get; set; }
+    public DbSet<Enrolment> Enrolments { get; set; }
+    public DbSet<Session> Sessions { get; set; }
   }
 }

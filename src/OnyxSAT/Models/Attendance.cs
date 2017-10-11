@@ -12,7 +12,10 @@ namespace OnyxSAT.Models
         public Boolean? Verified { get; set; }
 
         public string CardNo { get; set; } 
+        public DateTime? SessionDateTime { get; set; } 
         [ForeignKey("CardNo")]           
         public Card Card { get; set; }
+        [ForeignKey("SessionDateTime")]
+        public Session Session { get; set; }
     }
 }
