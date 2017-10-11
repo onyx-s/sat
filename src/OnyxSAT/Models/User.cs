@@ -25,6 +25,8 @@ namespace OnyxSAT.Models
         public string StaffId { get; set; }
         
         public ICollection<UserRole> UserRoles { get; set; }
+        public ICollection<Class> Classes { get; set; }
+        public ICollection<Enrolment> Enrolments { get; set; }
         public ICollection<Card> Cards { get; set; }
     }
 }
