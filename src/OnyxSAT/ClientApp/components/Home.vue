@@ -1,10 +1,11 @@
 <template>
-    <div class="home align-items-center container">
+    <!-- <div class="home align-items-center container">
         <h1 class="display-3">ONYX</h1>
         <h2 class="">Attendence Tracker</h2>
         <h3>Swinburne University</h3>
         <h4>Developed by ONYX</h4>
-    </div>
+    </div> -->
+    <schedule></schedule>
 </template>
 <style scoped>
 .home {
@@ -31,3 +32,19 @@ h5 {
     margin-bottom: 24px;
 }
 </style>
+
+<script>
+import Schedule from './Schedule'
+
+export default {
+  data() {
+    return {
+    }
+  },
+  methods: {
+  },
+  components: {
+      Schedule
+  }
+}
+</script>
