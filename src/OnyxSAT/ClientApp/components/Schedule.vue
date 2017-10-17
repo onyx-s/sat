@@ -98,11 +98,11 @@ export default {
 	props: {
 		timeGround: {
 			type: Array,
-			default: []
+			default: () => []
 		},
 		weekGround: {
 			type: Array,
-			default: [
+			default: () => [
 				'Monday',
 				'Tuesday',
 				'Wednesday',
@@ -112,7 +112,7 @@ export default {
 		},
 		taskDetail: {
 			type: Array,
-			default: []
+			default: () => []
 		},
 		color: {
 			type: Array,
