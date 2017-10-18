@@ -16,4 +16,4 @@ export default {
 }
 </script>
 
-<style src="./App.sass" lang="sass"/>
+<style src="./assets/main.sass" lang="sass"/>

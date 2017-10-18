@@ -5,14 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnyxSAT.Models
 {
-    public class Card
+    public class Session
     {
         [Key]
-        public string CardNo { get; set; }
+        public DateTime DateTime { get; set; }
+        public string RoomNumber { get; set; }
 
         public ICollection<Attendance> Attendances { get; set; }
 
-        public int? UserId { get; set; } 
-        public User User { get; set; } 
+        public int ClassId { get; set; }
+        public Class Class { get; set; }
     }
 }

@@ -11,7 +11,7 @@ using System;
 namespace OnyxSAT.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170828061216_Initial")]
+    [Migration("20170913233826_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,11 +25,11 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.Property<DateTime>("DateTime");
 
-                    b.Property<int>("CardNo");
+                    b.Property<string>("CardNo");
 
-                    b.Property<bool>("Verified");
+                    b.Property<bool?>("Verified");
 
-                    b.HasKey("DateTime");
+                    b.HasKey("DateTime", "CardNo");
 
                     b.HasIndex("CardNo");
 
@@ -38,9 +38,10 @@ namespace OnyxSAT.Data.Migrations
 
             modelBuilder.Entity("OnyxSAT.Models.Card", b =>
                 {
-                    b.Property<int>("CardNo");
+                    b.Property<string>("CardNo")
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<int>("UserId");
+                    b.Property<int?>("UserId");
 
                     b.HasKey("CardNo");
 
@@ -83,10 +84,10 @@ namespace OnyxSAT.Data.Migrations
                     b.Property<string>("Mobile")
                         .HasMaxLength(10);
 
-                    b.Property<int?>("StaffId")
+                    b.Property<string>("StaffId")
                         .HasMaxLength(20);
 
-                    b.Property<int?>("StudentId")
+                    b.Property<string>("StudentId")
                         .HasMaxLength(20);
 
                     b.HasKey("UserId");
@@ -119,8 +120,7 @@ namespace OnyxSAT.Data.Migrations
                 {
                     b.HasOne("OnyxSAT.Models.User", "User")
                         .WithMany("Cards")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("OnyxSAT.Models.UserRole", b =>

@@ -11,57 +11,57 @@ using OnyxSAT.Models;
 namespace OnyxSAT.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Users")]
-    public class UsersController : Controller
+    [Route("api/Classes")]
+    public class ClassesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public UsersController(ApplicationDbContext context)
+        public ClassesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Users
+        // GET: api/Classes
         [HttpGet]
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<Class> GetClasses()
         {
-            return _context.Users;
+            return _context.Classes;
         }
 
-        // GET: api/Users/5
+        // GET: api/Classes/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUser([FromRoute] int id)
+        public async Task<IActionResult> GetClass([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.UserId == id);
+            var @class = await _context.Classes.SingleOrDefaultAsync(m => m.ClassId == id);
 
-            if (user == null)
+            if (@class == null)
             {
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(@class);
         }
 
-        // PUT: api/Users/5
+        // PUT: api/Classes/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
+        public async Task<IActionResult> PutClass([FromRoute] int id, [FromBody] Class @class)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.UserId)
+            if (id != @class.ClassId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            _context.Entry(@class).State = EntityState.Modified;
 
             try
             {
@@ -69,7 +69,7 @@ namespace OnyxSAT.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!ClassExists(id))
                 {
                     return NotFound();
                 }
@@ -82,45 +82,45 @@ namespace OnyxSAT.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        // POST: api/Classes
         [HttpPost]
-        public async Task<IActionResult> PostUser([FromBody] User user)
+        public async Task<IActionResult> PostClass([FromBody] Class @class)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Users.Add(user);
+            _context.Classes.Add(@class);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+            return CreatedAtAction("GetClass", new { id = @class.ClassId }, @class);
         }
 
-        // DELETE: api/Users/5
+        // DELETE: api/Classes/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser([FromRoute] int id)
+        public async Task<IActionResult> DeleteClass([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.UserId == id);
-            if (user == null)
+            var @class = await _context.Classes.SingleOrDefaultAsync(m => m.ClassId == id);
+            if (@class == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
+            _context.Classes.Remove(@class);
             await _context.SaveChangesAsync();
 
-            return Ok(user);
+            return Ok(@class);
         }
 
-        private bool UserExists(int id)
+        private bool ClassExists(int id)
         {
-            return _context.Users.Any(e => e.UserId == id);
+            return _context.Classes.Any(e => e.ClassId == id);
         }
     }
 }
