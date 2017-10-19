@@ -42,15 +42,13 @@ namespace OnyxSAT.Data.Migrations
                 name: "Enrolments",
                 columns: table => new
                 {
-                    EnrolmentId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ClassId = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Enrolments", x => x.EnrolmentId);
+                    table.PrimaryKey("PK_Enrolments", x => new { x.ClassId, x.UserId });
                     table.ForeignKey(
                         name: "FK_Enrolments_Classes_ClassId",
                         column: x => x.ClassId,
@@ -93,11 +91,6 @@ namespace OnyxSAT.Data.Migrations
                 name: "IX_Classes_UserId",
                 table: "Classes",
                 column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Enrolments_ClassId",
-                table: "Enrolments",
-                column: "ClassId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Enrolments_UserId",

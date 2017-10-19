@@ -25,6 +25,9 @@ namespace OnyxSAT.Data
          .HasKey(a => new { a.DateTime, a.CardNo });
       
       builder.Entity<Enrolment>()
+         .HasKey(e => new { e.ClassId, e.UserId });
+
+      builder.Entity<Enrolment>()
         .HasOne(e => e.Class)
         .WithMany(c => c.Enrolments)
         .OnDelete(DeleteBehavior.Restrict);
