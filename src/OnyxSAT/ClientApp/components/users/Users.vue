@@ -16,10 +16,12 @@
             </div>
             -->
             <router-link to="/users/add" tag="button" class="nav-item btn-default btn-md add-student">Add User</router-link>
+            <button type="button" id="btnDelete" disabled>Delete</button>
         </div>
         <table class="table table-bordered mb-5">
             <thead class="thead-default">
                 <tr>
+                    <th></th>
                     <th>ID</th>
                     <th>Firstname</th>
                     <th>Lastname</th>
@@ -29,6 +31,7 @@
             </thead>
             <tbody>
                 <tr v-for="u in users">
+                    <td><input type="checkbox" id="checkbox" onclick=btnDeleteStatus() v-model="checked"></td>
                     <td>
                         <router-link :to="u.userId.toString()" append>{{ u.userId }}</router-link>
                     </td>
@@ -67,6 +70,15 @@ export default {
         Alert
     }
 }
+
+function btnDeleteStatus() {
+    if (document.getElementById("checkbox").checked == true) {
+        document.getElementById("btnDelete").disabled = false;
+    }
+    else {
+        document.getElementById("btnDelete").disabled = true;
+    }
+}
 </script>
 
 <style>
@@ -80,6 +92,12 @@ export default {
 .add-student {
     display: inline;
     position: relative;
+    width: 150px;
+    align-self: right;
+}
+.delete {
+    display: inline;
+    position: relative; 
     width: 150px;
     align-self: right;
 }
