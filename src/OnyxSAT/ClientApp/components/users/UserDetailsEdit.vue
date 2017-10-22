@@ -53,7 +53,8 @@ export default {
     },
     updateUser() {
       if (!this.errors.all().length) {
-        this.axios.post('/api/users/', {
+        this.axios.put('/api/users/' + this.$route.params.id, {
+          userId: this.user.userId,
           firstName: this.user.firstName,
           lastName: this.user.lastName,
           email: this.user.email,
@@ -62,9 +63,9 @@ export default {
           studentId: this.user.studentId || null
         })
           .then((response) => {
-            this.$router.push({ name: 'users/' + id, params: { alert: 'User Updated' } });
+            this.$router.push({ path: '../' + this.$route.params.id, params: { alert: 'User Updated' } });
           })
-          .catch(error => console.log(error));
+          .catch(error => console.log(error.response.data));
       }
     }
   },

@@ -15,7 +15,7 @@
                 </ul>
             </div>
             -->
-            <router-link to="/users/add" tag="button" class="nav-item btn-default btn-md add-student">Add User</router-link>
+            <router-link to="/users/add" tag="button" class="btn btn-default">Add User</router-link>
         </div>
         <table class="table table-bordered mb-5">
             <thead class="thead-default">
