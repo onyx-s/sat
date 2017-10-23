@@ -15,13 +15,8 @@
                 </ul>
             </div>
             -->
-<<<<<<< HEAD
-            <router-link to="/users/add" tag="button" class="nav-item btn-default btn-md add-student">Add User</router-link>
-            <button type="button" id="btnDelete" disabled>Delete</button>
-=======
             <router-link to="/users/add" tag="button" class="btn btn-default">Add User</router-link>
             <button v-on:click="deleteUsers()" tag="button" class="btn btn-default">Delete selected</button>
->>>>>>> origin/Kyle
         </div>
         <table class="table table-bordered mb-5">
             <thead class="thead-default">
@@ -36,16 +31,8 @@
             </thead>
             <tbody>
                 <tr v-for="u in users">
-<<<<<<< HEAD
-                    <td><input type="checkbox" id="checkbox" onclick=btnDeleteStatus() v-model="checked"></td>
-=======
                     <td><input type="checkbox" class="align-self-center" :id="u.userId" @click="toggleCheckbox(u.userId)"/></td>
->>>>>>> origin/Kyle
-                    <td>
-                        <router-link :to="u.userId.toString()" append>{{ u.userId }}</router-link>
-                    </td>
                     <td>{{ u.firstName }}</td>
-                    <td>{{ u.lastName }}</td>
                     <td>{{ u.email }}</td>
                     <td>{{ u.mobile }}</td>
                 </tr>
