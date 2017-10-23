@@ -29,8 +29,8 @@
               <option value="student" v-model="user.userType">Student</option>
               <option value="staff" v-model="user.userType">Staff</option>
             </select>
-            <input type="text" name="studentId" class="form-control" v-if="this.user.userType === 'student'" v-validate="{required: true, numeric: true}" v-model="user.studentId" />
-            <input type="text" name="staffId" class="form-control" v-if="this.user.userType === 'staff'" v-validate="{required: true, numeric: true}" v-model="user.staffId" />
+            <input type="text" name="studentId" class="form-control" v-if="this.user.userType === 'student'" v-validate="{numeric: true}" v-model="user.studentId" />
+            <input type="text" name="staffId" class="form-control" v-if="this.user.userType === 'staff'" v-validate="{numeric: true}" v-model="user.staffId" />
           </span>
         </fieldset>
         <br>
