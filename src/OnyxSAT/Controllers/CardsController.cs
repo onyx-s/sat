@@ -28,6 +28,14 @@ namespace OnyxSAT.Controllers
             return _context.Cards;
         }
 
+        // GET: api/Cards/unlinked
+        [HttpGet("unlinked")]
+        public IEnumerable<Card> GetUnlinkedCards()
+        {
+            return _context.Cards.Where(c => c.UserId == null);
+
+        }
+        
         // GET: api/Cards/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCard([FromRoute] string id)
