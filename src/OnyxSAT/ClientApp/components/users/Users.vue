@@ -51,7 +51,7 @@
                     <td>{{ u.lastName }}</td>
                     <td>{{ u.email }}</td>
                     <td>{{ u.mobile }}</td>
-                    <td><input type="checkbox" class="align-self-center" :id="u.userId" @click="toggleCheckbox(u.userId), btnDisable(u.userId)"/></td>
+                    <td><input type="checkbox" class="align-self-center" :id="u.userId" @click="toggleCheckbox(u.userId), btnDisable()"/></td>
                 </tr>
             </tbody>
         </table>
@@ -69,16 +69,22 @@ export default {
         }
     },
     methods: {
+        //Fetches the list of users from database
         getUsers() {
             this.axios.get('/api/users/')
                 .then(response => this.users = response.data)
                 .catch(error => console.log(error))
         },
+        //Deletes the selected users
         deleteUsers() {
             for (let i = 0; i < this.checkedNames.length; i++) {
                 this.axios.delete('/api/users/' + this.checkedNames[i]);
             }
+            //Refresh the page and alert that users were deleted
+            //this.$router.push({ name: 'users', params: { alert: 'User Added' } });
+            location.reload(true);
         },
+        //Adds checked items to array of items to delete
         toggleCheckbox(id) {
             if (document.getElementById(id).checked === true) {
                 this.checkedNames.push(id);
@@ -86,14 +92,16 @@ export default {
                 this.checkedNames.splice(this.checkedNames.indexOf(id),1);
             }
         },
-        btnDisable(id) {
-            if (document.getElementById(id).checked === true) {
-                document.getElementById('btn-Delete').disabled = false;
-                document.getElementById('btn-Delete').active = true;
-            }
-            else if (document.getElementById(id).checked === false) {
-                document.getElementById('btn-Delete').active = false;
-                document.getElementById('btn-Delete').disabled = true;
+        //Toggles the delete users button depending on checked boxes
+        btnDisable() {
+            let e_id = event.target;
+            let e_btn = document.getElementById('btn-Delete');
+            if (e_id.checked === true) {
+                e_btn.disabled = false;
+                e_btn.active = true;
+            } else if (e_id.checked === false) {
+                e_btn.active = false;
+                e_btn.disabled = true;
             }
         }
     },
