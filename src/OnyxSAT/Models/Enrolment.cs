@@ -4,7 +4,6 @@ namespace OnyxSAT.Models
 {
     public class Enrolment
     {
-        public int EnrolmentId { get; set; }
         public string Status { get; set; }
         
         public int UserId { get; set; } 

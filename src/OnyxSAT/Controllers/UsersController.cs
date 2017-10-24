@@ -141,7 +141,9 @@ namespace OnyxSAT.Controllers
       }
       catch (DbUpdateException)
       {
-        if (UserHasRole(userRole.UserId, userRole.RoleId))
+        var userHasRole = _context.UserRoles.Any(uR => uR.UserId == userRole.UserId && uR.RoleId == userRole.RoleId);
+        
+        if (userHasRole)
         {
           return new StatusCodeResult(StatusCodes.Status409Conflict);
         }
@@ -151,7 +153,7 @@ namespace OnyxSAT.Controllers
         }
       }
 
-      return CreatedAtAction("GetUserRole", new { userId = userRole.UserId, roleId = userRole.RoleId }, userRole);
+      return CreatedAtAction("PostRole", new { userId = userRole.UserId, roleId = userRole.RoleId }, userRole);
     }
 
     // DELETE: api/users/5/roles/2
@@ -178,11 +180,6 @@ namespace OnyxSAT.Controllers
     private bool UserExists(int id)
     {
       return _context.Users.Any(e => e.UserId == id);
-    }
-
-    private bool UserHasRole(int userId, int roleId)
-    {
-      return _context.UserRoles.Any(e => e.UserId == userId && e.RoleId == roleId);
     }
   }
 }
