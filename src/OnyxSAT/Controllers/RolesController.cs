@@ -11,65 +11,57 @@ using OnyxSAT.Models;
 namespace OnyxSAT.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Cards")]
-    public class CardsController : Controller
+    [Route("api/Roles")]
+    public class RolesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public CardsController(ApplicationDbContext context)
+        public RolesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Cards
+        // GET: api/Roles
         [HttpGet]
-        public IEnumerable<Card> GetCards()
+        public IEnumerable<Role> GetRoles()
         {
-            return _context.Cards;
+            return _context.Roles;
         }
 
-        // GET: api/Cards/unlinked
-        [HttpGet("unlinked")]
-        public IEnumerable<Card> GetUnlinkedCards()
-        {
-            return _context.Cards.Where(c => c.UserId == null);
-
-        }
-        
-        // GET: api/Cards/5
+        // GET: api/Roles/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCard([FromRoute] string id)
+        public async Task<IActionResult> GetRole([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == id);
+            var role = await _context.Roles.SingleOrDefaultAsync(m => m.RoleId == id);
 
-            if (card == null)
+            if (role == null)
             {
                 return NotFound();
             }
 
-            return Ok(card);
+            return Ok(role);
         }
 
-        // PUT: api/Cards/5
+        // PUT: api/Roles/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCard([FromRoute] string id, [FromBody] Card card)
+        public async Task<IActionResult> PutRole([FromRoute] int id, [FromBody] Role role)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != card.CardNo)
+            if (id != role.RoleId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(card).State = EntityState.Modified;
+            _context.Entry(role).State = EntityState.Modified;
 
             try
             {
@@ -77,7 +69,7 @@ namespace OnyxSAT.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CardExists(id))
+                if (!RoleExists(id))
                 {
                     return NotFound();
                 }
@@ -90,45 +82,45 @@ namespace OnyxSAT.Controllers
             return NoContent();
         }
 
-        // POST: api/Cards
+        // POST: api/Roles
         [HttpPost]
-        public async Task<IActionResult> PostCard([FromBody] Card card)
+        public async Task<IActionResult> PostRole([FromBody] Role role)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Cards.Add(card);
+            _context.Roles.Add(role);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCard", new { id = card.CardNo }, card);
+            return CreatedAtAction("GetRole", new { id = role.RoleId }, role);
         }
 
-        // DELETE: api/Cards/5
+        // DELETE: api/Roles/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCard([FromRoute] string id)
+        public async Task<IActionResult> DeleteRole([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == id);
-            if (card == null)
+            var role = await _context.Roles.SingleOrDefaultAsync(m => m.RoleId == id);
+            if (role == null)
             {
                 return NotFound();
             }
 
-            _context.Cards.Remove(card);
+            _context.Roles.Remove(role);
             await _context.SaveChangesAsync();
 
-            return Ok(card);
+            return Ok(role);
         }
 
-        private bool CardExists(string id)
+        private bool RoleExists(int id)
         {
-            return _context.Cards.Any(e => e.CardNo == id);
+            return _context.Roles.Any(e => e.RoleId == id);
         }
     }
 }

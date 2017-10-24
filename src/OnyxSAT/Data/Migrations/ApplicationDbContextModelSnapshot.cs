@@ -79,18 +79,13 @@ namespace OnyxSAT.Data.Migrations
 
             modelBuilder.Entity("OnyxSAT.Models.Enrolment", b =>
                 {
-                    b.Property<int>("EnrolmentId")
-                        .ValueGeneratedOnAdd();
-
                     b.Property<int>("ClassId");
-
-                    b.Property<string>("Status");
 
                     b.Property<int>("UserId");
 
-                    b.HasKey("EnrolmentId");
+                    b.Property<string>("Status");
 
-                    b.HasIndex("ClassId");
+                    b.HasKey("ClassId", "UserId");
 
                     b.HasIndex("UserId");
 

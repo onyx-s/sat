@@ -11,7 +11,7 @@ using System;
 namespace OnyxSAT.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171011071911_ReleaseTwo")]
+    [Migration("20171019095556_ReleaseTwo")]
     partial class ReleaseTwo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,18 +80,13 @@ namespace OnyxSAT.Data.Migrations
 
             modelBuilder.Entity("OnyxSAT.Models.Enrolment", b =>
                 {
-                    b.Property<int>("EnrolmentId")
-                        .ValueGeneratedOnAdd();
-
                     b.Property<int>("ClassId");
-
-                    b.Property<string>("Status");
 
                     b.Property<int>("UserId");
 
-                    b.HasKey("EnrolmentId");
+                    b.Property<string>("Status");
 
-                    b.HasIndex("ClassId");
+                    b.HasKey("ClassId", "UserId");
 
                     b.HasIndex("UserId");
 
