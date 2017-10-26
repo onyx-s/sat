@@ -40,6 +40,7 @@ namespace OnyxSAT.Controllers
       var user = await _context.Users
           .Include(u => u.UserRoles)
               .ThenInclude(uR => uR.Role)
+          .Include(u => u.Classes)
           .Include(u => u.Cards)
           .AsNoTracking()
           .SingleOrDefaultAsync(m => m.UserId == id);
