@@ -130,18 +130,26 @@ hackyWaitRun();
     
     data() {
         return {
-            classes: []
+            user: {}
         }
     },
     methods: {
-        getClasses() {
-            this.axios.get('/api/classes/')
-            .then(response => this.classes = response.data)
+        getUser() {
+            this.axios.get('/api/users/3')
+            .then(response => this.user = response.data)
             .catch(error => console.log(error))
+        },
+        populateTable() {
+            console.log(this.user);
+            this.user.classes.forEach(function(element) {
+                console.log(element)
+            });
+        
         }
     },
     created() {
-        console.log(this.getClasses());
+        this.getUser();
+        this.populateTable();
     }
 }
 </script>
