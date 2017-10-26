@@ -30,7 +30,10 @@
             <li v-for="card in user.cards" class="list-group-item">{{ card.cardNo }}</li>
           </ul>
         </div>
-        <router-link to="edit" tag="button" class="btn btn-default" append>Edit</router-link>
+        <div class="d-flex d-inline">
+          <router-link to="./" tag="button" class="btn align-self-start btn-default">Back</router-link>
+          <router-link to="edit" tag="button" class="btn btn-default" append>Edit</router-link>
+        </div>
       </div>
     </template>
     <not-found v-if="userNotFound"></not-found>
@@ -69,7 +72,10 @@ export default {
 <style lang="sass" scoped>
 .table-container
   max-width: 600px
-
+.btn
+  margin-left: 50px
+  margin-right: 50px
+  width: 100px
 thead
   min-width: 105px
   font-weight: bold
