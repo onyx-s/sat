@@ -33,8 +33,8 @@
         this.c.times = [];
         
         this.c.style.position = 'absolute';
-        this.c.style.left = left;
-        this.c.style.top = top;
+        this.c.style.left = left+"px";
+        this.c.style.top = top+"px";
         this.c.style.width = width+'px';
         this.c.style.height = height+'px';
         this.c.width = 700;
@@ -51,6 +51,18 @@
         for (let x = 0; x < this.c.daysInWeek; x++) {
             for (let y = 0; y < this.c.hoursInDay; y++) {
                 ctx.strokeRect(x*this.c.dayIncrement,y*this.c.hourIncrement,this.c.dayIncrement,this.c.hourIncrement);
+            }
+        }
+
+        this.c.onclick = function(e) {
+            let day = Math.floor((e.clientX-1)/this.dayIncrement)
+            let hour = Math.floor((e.clientY-89)/this.hourIncrement);
+            for (let e = 0; e < this.times.length; e++) {
+                if (this.times[e].day == day) {
+                    if (this.times[e].start <= hour && this.times[e].start+this.times[e].length) {
+                        this.times[e].id;//CLICKED CLASS' ID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    }
+                }
             }
         }
 
@@ -86,8 +98,8 @@
             }
         }
         
-        this.c.addSlot = function(day, start, length, name) {
-            this.times.push({day, start, length, name});
+        this.c.addSlot = function(day, start, length, name, id) {
+            this.times.push({day, start, length, name, id});
             this.draw();
         }
         
@@ -108,14 +120,28 @@
 
 function hackyWaitRun() {
     console.log("HRW");
-    let i = new Timetable(0,0,700,240);			
+    let i = new Timetable(1,1,700,240);			
 
     document.getElementById("HackyDiv").appendChild(i);
-    i.addSlot(0,1,4,"Potato Studies");
-    i.addSlot(1,3,5,"Potato Sculpting");
 }
 
 hackyWaitRun();            
+        },
+    
+    data() {
+        return {
+            classes: []
         }
-    } 
+    },
+    methods: {
+        getClasses() {
+            this.axios.get('/api/classes/')
+            .then(response => this.classes = response.data)
+            .catch(error => console.log(error))
+        }
+    },
+    created() {
+        console.log(this.getClasses());
+    }
+}
 </script>
