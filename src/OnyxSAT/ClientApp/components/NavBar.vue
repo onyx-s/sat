@@ -12,9 +12,6 @@
           <router-link tag="li" to="/users" class="nav-item">
             <a class="nav-link">Users</a>
           </router-link>
-          <router-link tag="li" to="/attendances" class="nav-item">
-            <a class="nav-link">Attendances</a>
-          </router-link>
         </ul>
       </div>
     </nav>

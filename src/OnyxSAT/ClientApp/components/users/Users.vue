@@ -16,7 +16,7 @@
             </div>
             -->
             <router-link to="/users/add" tag="button" class="btn btn-default">Add User</router-link>
-            <button id="btn-Delete" tag="button" class="btn btn-danger float-right" data-toggle="modal" data-target=".bs-example-modal-sm" disabled>Delete selected</button>
+            <button id="btn-Delete" tag="button" class="btn btn-danger float-right" data-toggle="modal" data-target=".bs-example-modal-sm" disabled>Delete Selected</button>
         </div>
         <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
             <div class="modal-dialog modal-sm" role="document">
