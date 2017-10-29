@@ -8,6 +8,7 @@
     
 
 <div>
+	<center><h1 class="display-4 mb-4">Firstname Surname</h1></center>
 	<table class="table table-bordered mb-5">
 		<thead class="thead-default">
 				<tr>
