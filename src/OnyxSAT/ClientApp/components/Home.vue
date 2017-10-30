@@ -6,6 +6,7 @@
 		<thead class="thead-default">
 				<tr>
 						<th>ID</th>
+						<th>Name</th>
 						<th>Day</th>
 						<th>Start Time</th>
 						<th>End Time</th>
@@ -18,6 +19,7 @@
 							<td>
 									<router-link :to="'/Classes/' + c.classId.toString()" append>{{ c.classId }}</router-link>
 							</td>
+							<td>{{ c.name }}</td>
 							<td>{{ c.dayOfWeek }}</td>
 							<td>{{ c.startTime.slice(c.startTime.indexOf('T') + 1) }}</td>
 							<td>{{ c.endTime.slice(c.endTime.indexOf('T') + 1) }}</td>
@@ -44,7 +46,7 @@ export default {
   methods: {
     getUser() {
       this.axios
-        .get("/api/users/4")
+        .get("/api/users/1")
         .then(response => (this.user = response.data))
         .catch(error => console.log(error));
     }
