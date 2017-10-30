@@ -8,6 +8,7 @@
     
 
 <div class="container d-flex flex-column">
+	<center><h1 class="display-4 mb-4">Welcome, {{ user.firstName }} {{ user.lastName }}</h1></center>
 	<div class="content-row">
 		<router-link to="addclass" tag="button" class="btn btn-default align-self-start" append>Add Class</router-link>
 	</div>
