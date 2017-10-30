@@ -7,7 +7,7 @@ namespace OnyxSAT.Models
 {
     public class Session
     {
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public DateTime DateTime { get; set; }
         public string RoomNumber { get; set; }
 
@@ -15,5 +15,7 @@ namespace OnyxSAT.Models
 
         public int ClassId { get; set; }
         public Class Class { get; set; }
+        [ForeignKey("RoomNumber")]
+        public Location Location { get; set; }
     }
 }

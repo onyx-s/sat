@@ -10,6 +10,8 @@ namespace OnyxSAT.Models
         public int ClassId { get; set; }
         [Required]
         public string DayOfWeek { get; set; }
+        [Required]
+        public string Name { get; set; }
         [Required] 
         [DataType(DataType.Time)]       
         public DateTime StartTime { get; set; }
