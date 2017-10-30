@@ -2,31 +2,45 @@
   <div class="container d-flex flex-column align-items-center">
     <template v-if="Object.keys(user).length">
       <h1 class="display-4 mb-4">Edit Student Details</h1>
-      <form @submit.prevent="updateUser" class="d-flex flex-column align-items-center w-100 table-container">
-        <table class="table table-bordered d-flex mb-5">
-          <thead class="thead-default w-25">
-            <tr class="d-flex flex-column">
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Mobile</th>
-              <th>Staff ID</th>
-              <th>Student ID</th>
-            </tr>
-          </thead>
-          <tbody class="w-75">
-            <tr class="d-flex flex-column align-content-between">
-              <td><input type="text" name="First Name" class="form-control" v-validate="{required: true, alpha_spaces: true}" v-model="user.firstName" autofocus/></td>
-              <td><input type="text" name="Last Name" class="form-control" v-validate="{required: true, alpha_spaces: true}" v-model="user.lastName" /></td>
-              <td><input type="email" name="Email" class="form-control" v-validate="'required'" v-model="user.email" /></td>
-              <td><input type="text" name="Mobile" class="form-control" v-validate="{ rules: { required: true, regex: /^04\d{8}$/} }" v-model="user.mobile" /></td>
-              <td><input type="text" name="staffId" class="form-control" v-validate="{required: true, numeric: true}" v-model="user.staffId" /></td>
-              <td><input type="text" name="studentId" class="form-control" v-validate="{required: true, numeric: true}" v-model="user.studentId" /></td>
-            </tr>
-          </tbody>
-        </table>
-        <button type="submit" class="submit btn btn-default">Save</button>
-      </form>
+      <form @submit.prevent="updateUser" class="form-container">
+       <div class="form-group row">
+  <label for="example-text-input" class="col-3 col-form-label">First Name</label>
+  <div class="col-7">
+    <input class="form-control" type="text" v-validate="{required: true, alpha_spaces: true}" v-model="user.firstName" autofocus/>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-3 col-form-label">Last Name</label>
+  <div class="col-7">
+    <input class="form-control" type="text" v-validate="{required: true, alpha_spaces: true}" v-model="user.lastName" >
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-email-input" class="col-3 col-form-label">Email</label>
+  <div class="col-7">
+    <input class="form-control" type="email" v-validate="'required'" v-model="user.email">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-url-input" class="col-3 col-form-label">Mobile</label>
+  <div class="col-7">
+    <input class="form-control" type="text" v-validate="{ rules: { required: true, regex: /^04\d{8}$/} }" v-model="user.mobile">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-tel-input" class="col-3 col-form-label">Staff ID</label>
+  <div class="col-7">
+    <input class="form-control" type="text" v-validate="{ numeric: true}" v-model="user.staffId">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-password-input" class="col-3 col-form-label">Student ID</label>
+  <div class="col-7">
+    <input class="form-control" type="text" v-validate="{ numeric: true}" v-model="user.studentId">
+  </div>
+</div>  
+<button type="submit" class="submit btn btn-default">Save</button>
+  </form>
     </template>
     <not-found v-if="userNotFound"></not-found>
   </div>
@@ -79,14 +93,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.table-container
-  max-width: 600px
-
-.table-bordered th, .table-bordered td
-  border: none
-  border-top: 1px solid #eceeef
-  &:first-child
-    border: none
+.form-container
+  width: 600px
 
 thead, th
   min-width: 105px
@@ -106,12 +114,6 @@ h3
   margin:
     bottom: 5px
     right: 5px
-
-input
-  border: 0
-  height: 100%
-  padding: 14.5px 12px
-  width: 100%
 tr
-  height: 100%
+  height: 100% 
 </style>

@@ -31,8 +31,8 @@
           </ul>
         </div>
         <div class="d-flex d-inline">
-          <router-link to="./" tag="button" class="btn align-self-start btn-default">Back</router-link>
-          <router-link to="edit" tag="button" class="btn btn-default" append>Edit</router-link>
+          <router-link to="edit" tag="button" class="btn align-self-start btn-default" append>Edit</router-link>
+          <router-link to="./" tag="button" class="btn btn-default">Back</router-link>
         </div>
       </div>
     </template>
