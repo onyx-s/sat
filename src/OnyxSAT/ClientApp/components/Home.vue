@@ -7,30 +7,33 @@
     </div> -->
     
 
-<div>
+<div class="container d-flex flex-column">
 	<table class="table table-bordered mb-5">
 		<thead class="thead-default">
-				<tr>
-						<th>ID</th>
-						<th>Day</th>
-						<th>Start Time</th>
-						<th>End Time</th>
-						<th>Location</th>
-				</tr>
+			<tr>
+				<th>ID</th>
+				<th>Day</th>
+				<th>Start Time</th>
+				<th>End Time</th>
+				<th>Location</th>
+			</tr>
 		</thead>
 			<tbody>
-					<tr v-for="c in user.classes">
-							<td>
-									<router-link :to="c.classId.toString()" append>{{ c.classId }}</router-link>
-							</td>
-							<td>{{ c.dayOfWeek }}</td>
-							<td>{{ c.startTime.slice(c.startTime.indexOf('T') + 1) }}</td>
-							<td>{{ c.endTime.slice(c.endTime.indexOf('T') + 1) }}</td>
-							<td>{{ c.location }}</td>
-					</tr>
-			</tbody>
-		</table>
-	</div>
+				<tr v-for="c in user.classes">
+					<td>
+					<router-link :to="c.classId.toString()" append>{{ c.classId }}</router-link>
+					</td>
+					<td>{{ c.dayOfWeek }}</td>
+					<td>{{ c.startTime.slice(c.startTime.indexOf('T') + 1) }}</td>
+					<td>{{ c.endTime.slice(c.endTime.indexOf('T') + 1) }}</td>
+					<td>{{ c.location }}</td>
+				</tr>
+		</tbody>
+	</table>
+	<div>
+	<router-link to="addclass" tag="button" class="btn btn-default" append>Add Class</router-link>
+</div>
+</div>
 </template>
 
 <style lang="sass" scoped>
