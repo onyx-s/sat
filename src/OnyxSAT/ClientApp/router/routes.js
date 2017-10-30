@@ -8,7 +8,6 @@ import Attendances from '@/components/Attendances';
 import Class from '@/components/Class';
 import UserDetailsEdit from '@/components/users/UserDetailsEdit';
 import AddClass from '@/components/AddClass';
-import AttendanceHistory from '@/components/AttendanceHistory';
 
 export default [
     { path: '/', component: Home },
@@ -20,7 +19,7 @@ export default [
     { path: '/attendances', component: Attendances },
     { path: '/classes/:id', component: Class },
     { path: '/users/:id/edit', component: UserDetailsEdit },
-    { path: '/classes/add', component: AddClass },
-    { path: '/attendances/history', components: AttendanceHistory }
+    { path: '/classes/add', component: AddClass }
+    
 
 ]
