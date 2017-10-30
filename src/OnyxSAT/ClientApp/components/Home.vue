@@ -1,12 +1,5 @@
 <template>
-    <!-- <div class="home align-items-center container">
-        <h1 class="display-3">ONYX</h1>
-        <h2 class="">Attendence Tracker</h2>
-        <h3>Swinburne University</h3>
-        <h4>Developed by ONYX</h4>
-    </div> -->
     
-
 <div>
 	<table class="table table-bordered mb-5">
 		<thead class="thead-default">
@@ -21,7 +14,7 @@
 			<tbody>
 					<tr v-for="c in user.classes">
 							<td>
-									<router-link :to="c.classId.toString()" append>{{ c.classId }}</router-link>
+									<router-link :to="'/Classes/' + c.classId.toString()" append>{{ c.classId }}</router-link>
 							</td>
 							<td>{{ c.dayOfWeek }}</td>
 							<td>{{ c.startTime.slice(c.startTime.indexOf('T') + 1) }}</td>
