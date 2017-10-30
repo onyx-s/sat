@@ -7,7 +7,8 @@ namespace OnyxSAT.Models
   public class Role
   {
     public int RoleId { get; set; }
-    [StringLength(20)]
+    [Required]
+    [StringLength(20)]    
     public string Name { get; set; }
     public string Description { get; set; }
 

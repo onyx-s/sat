@@ -26,6 +26,9 @@ namespace OnyxSAT.Data
       
       builder.Entity<Enrolment>()
          .HasKey(e => new { e.ClassId, e.UserId });
+      
+      builder.Entity<Session>()
+         .HasKey(s => new { s.DateTime, s.RoomNumber });
 
       builder.Entity<Enrolment>()
         .HasOne(e => e.Class)
@@ -41,5 +44,6 @@ namespace OnyxSAT.Data
     public DbSet<Class> Classes { get; set; }
     public DbSet<Enrolment> Enrolments { get; set; }
     public DbSet<Session> Sessions { get; set; }
+    public DbSet<Location> Locations { get; set; }
   }
 }
