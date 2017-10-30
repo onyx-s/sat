@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2379148343fa5c0b9437"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "42d5ff9b46a806297179"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -14348,7 +14348,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
   data: function data() {
     return {
-      user: {}
+      user: {},
+      userType: {}
     };
   },
 
@@ -14370,6 +14371,9 @@ exports.default = {
           return console.log(error);
         });
       }
+    },
+    selectRole: function selectRole() {
+      alert('Hello');
     }
   }
 };
@@ -14384,9 +14388,11 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "d-flex flex-column align-items-center container"
   }, [_c('h1', {
     staticClass: "display-4"
-  }, [_vm._v("Add a User")]), _vm._v(" "), (_vm.errors.any()) ? _c('ul', _vm._l((_vm.errors.all()), function(error) {
-    return _c('li', [_vm._v(" " + _vm._s(error))])
-  })) : _vm._e(), _vm._v(" "), _c('section', {
+  }, [_vm._v("Add a User")]), _vm._v(" "), (_vm.errors.any()) ? _c('ul', [_c('li', {
+    attrs: {
+      "vb-for": "error in errors.all()"
+    }
+  }, [_vm._v(" " + _vm._s(_vm.error))])]) : _vm._e(), _vm._v(" "), _c('section', {
     staticClass: "row w-100 d-flex align-items-center flex-column"
   }, [_c('form', {
     staticClass: "d-flex flex-column w-100 mb-3",
@@ -14534,8 +14540,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }, {
       name: "model",
       rawName: "v-model",
-      value: (_vm.user.userType),
-      expression: "user.userType"
+      value: (_vm.userType),
+      expression: "userType"
     }],
     staticClass: "form-control w-25",
     attrs: {
@@ -14550,32 +14556,18 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
           var val = "_value" in o ? o._value : o.value;
           return val
         });
-        _vm.user.userType = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        _vm.userType = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
       }
     }
   }, [_c('option', {
     attrs: {
       "value": "student"
-    },
-    model: {
-      value: (_vm.user.userType),
-      callback: function($$v) {
-        _vm.user.userType = $$v
-      },
-      expression: "user.userType"
     }
   }, [_vm._v("Student")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "staff"
-    },
-    model: {
-      value: (_vm.user.userType),
-      callback: function($$v) {
-        _vm.user.userType = $$v
-      },
-      expression: "user.userType"
     }
-  }, [_vm._v("Staff")])]), _vm._v(" "), (this.user.userType === 'student') ? _c('input', {
+  }, [_vm._v("Staff")])]), _vm._v(" "), (_vm.userType === 'student') ? _c('input', {
     directives: [{
       name: "validate",
       rawName: "v-validate",
@@ -14603,7 +14595,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         _vm.user.studentId = $event.target.value
       }
     }
-  }) : _vm._e(), _vm._v(" "), (this.user.userType === 'staff') ? _c('input', {
+  }) : _vm._e(), _vm._v(" "), (_vm.userType === 'staff') ? _c('input', {
     directives: [{
       name: "validate",
       rawName: "v-validate",

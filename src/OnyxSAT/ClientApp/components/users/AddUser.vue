@@ -2,7 +2,7 @@
   <div class="d-flex flex-column align-items-center container">
     <h1 class="display-4">Add a User</h1>
     <ul v-if="errors.any()">
-      <li v-for="error in errors.all()"> {{ error }}</li>
+      <li vb-for="error in errors.all()"> {{ error }}</li>
     </ul>
     <section class="row w-100 d-flex align-items-center flex-column">
       <form @submit.prevent="addUser" class="d-flex flex-column w-100 mb-3">
@@ -25,12 +25,12 @@
         <fieldset class="form-inline">
           <label>User ID</label>
           <span class="form-inline">
-            <select type="text" name="userType" class="form-control w-25" v-validate="{required: true}" v-model="user.userType" >
-              <option value="student" v-model="user.userType">Student</option>
-              <option value="staff" v-model="user.userType">Staff</option>
+            <select type="text" name="userType" class="form-control w-25" v-validate="{required: true}" v-model="userType" >
+              <option value="student">Student</option>
+              <option value="staff" >Staff</option>
             </select>
-            <input type="text" name="studentId" class="form-control w-75" v-if="this.user.userType === 'student'" v-validate="{numeric: true}" v-model="user.studentId" />
-            <input type="text" name="staffId" class="form-control w-75" v-if="this.user.userType === 'staff'" v-validate="{numeric: true}" v-model="user.staffId" />
+            <input type="text" name="studentId" class="form-control w-75" v-if="userType === 'student'" v-validate="{numeric: true}" v-model="user.studentId" />
+            <input type="text" name="staffId" class="form-control w-75" v-if="userType === 'staff'" v-validate="{numeric: true}" v-model="user.staffId" />
           </span>
         </fieldset>
         <br>
@@ -43,13 +43,14 @@
 export default {
   data() {
     return {
-      user: {}
+      user: {},
+      userType: {}
     }
   },
   methods: {
     addUser() {
       if (!this.errors.all().length) {
-        this.axios.post('/api/users/', {
+        this.axios.post('/api/users/', {  
           firstName: this.user.firstName,
           lastName: this.user.lastName,
           email: this.user.email,
@@ -62,6 +63,9 @@ export default {
           })
           .catch(error => console.log(error));
       }
+    },
+    selectRole(){
+        alert('Hello');
     }
   }
 }
