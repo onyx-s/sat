@@ -8,6 +8,9 @@
     
 
 <div class="container d-flex flex-column">
+	<div class="content-row">
+		<router-link to="addclass" tag="button" class="btn btn-default align-self-start" append>Add Class</router-link>
+	</div>
 	<table class="table table-bordered mb-5">
 		<thead class="thead-default">
 			<tr>
@@ -30,9 +33,6 @@
 				</tr>
 		</tbody>
 	</table>
-	<div>
-	<router-link to="addclass" tag="button" class="btn btn-default" append>Add Class</router-link>
-</div>
 </div>
 </template>
 
@@ -40,6 +40,9 @@
 	table
 		width: 80%
 		margin: 0 auto
+	
+	.btn
+		margin-left: 111px
 </style>
 
 <script>
