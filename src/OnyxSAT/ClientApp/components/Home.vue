@@ -1,7 +1,7 @@
 <template>
     
 <div>
-	<center><h1 class="display-4 mb-4">Firstname Surname</h1></center>
+	<center><h1 class="display-4 mb-4">Welcome, {{ user.firstName}} {{user.lastName}}</h1></center>
 	<table class="table table-bordered mb-5">
 		<thead class="thead-default">
 				<tr>
@@ -14,6 +14,7 @@
 		</thead>
 			<tbody>
 					<tr v-for="c in user.classes">
+
 							<td>
 									<router-link :to="'/Classes/' + c.classId.toString()" append>{{ c.classId }}</router-link>
 							</td>
@@ -43,7 +44,7 @@ export default {
   methods: {
     getUser() {
       this.axios
-        .get("/api/users/3")
+        .get("/api/users/4")
         .then(response => (this.user = response.data))
         .catch(error => console.log(error));
     }
