@@ -53,7 +53,6 @@ export default {
   },
   methods: {
     addClass() {
-      console.log(this.classGroup.startTime);
       if (!this.errors.all().length) {
         this.axios.post('/api/classes/', {
           name: this.classGroup.name,
