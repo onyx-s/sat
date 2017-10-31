@@ -69,6 +69,9 @@ export default {
         }
     },
     methods: {
+        disableLoading() {
+            document.getElementById("loading").style.display = "none";
+        },
         //Fetches the list of users from database
         getUsers() {
             this.axios.get('/api/users/')
@@ -82,6 +85,7 @@ export default {
             }
             //Refresh the page and alert that users were deleted
             //this.$router.push({ name: 'users', params: { alert: 'User Added' } });
+            document.getElementById("loading").style.display = "block";
             location.reload(true);
         },
         //Adds checked items to array of items to delete
@@ -109,6 +113,7 @@ export default {
         if (this.$route.params.alert)
             this.alert = this.$route.params.alert;
         this.getUsers();
+        this.disableLoading();
     },
     components: {
         Alert

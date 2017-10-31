@@ -26,9 +26,8 @@ export default {
   },
   methods: {
     created() {
-      document.onload(function(){
-        let loading = document.getElementById("loading");
-        loading.style.display = "none";
+      this.$nextTick(() => {
+        this.refresh();
       });
     }
   }
