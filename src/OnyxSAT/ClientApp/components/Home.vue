@@ -1,21 +1,5 @@
 <template>
 
-<div class="container d-flex flex-column">
-	<center><h1 class="display-4 mb-4">Welcome, {{ user.firstName }} {{ user.lastName }}</h1></center>
-	<div class="content-row">
-		<router-link to="addclass" tag="button" class="btn btn-default align-self-start" append>Add Class</router-link>
-	</div>
-	<table class="table table-bordered mb-5">
-		<thead class="thead-default">
-			<tr>
-				<th>ID</th>
-				<th>Day</th>
-				<th>Start Time</th>
-				<th>End Time</th>
-				<th>Location</th>
-			</tr>
-		</thead>
-
 	<div class="d-flex flex-column">
 		<h1 class="align-self-center display-4 mb-4">Welcome, {{ user.firstName}} {{user.lastName}}</h1>
 		<div class="alert align-self-center">
