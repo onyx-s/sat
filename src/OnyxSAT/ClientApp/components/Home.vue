@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
 <div class="container d-flex flex-column">
 	<center><h1 class="display-4 mb-4">Welcome, {{ user.firstName }} {{ user.lastName }}</h1></center>
 	<div class="content-row">
@@ -15,7 +15,7 @@
 				<th>Location</th>
 			</tr>
 		</thead>
-=======
+
 	<div class="d-flex flex-column">
 		<h1 class="align-self-center display-4 mb-4">Welcome, {{ user.firstName}} {{user.lastName}}</h1>
 		<div class="alert align-self-center">
@@ -32,7 +32,7 @@
 							<th>Location</th>
 					</tr>
 			</thead>
->>>>>>> LiamB
+
 			<tbody>
 					<tr v-for="c in user.classes">
 							<td>
