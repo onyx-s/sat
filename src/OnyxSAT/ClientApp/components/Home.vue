@@ -1,18 +1,20 @@
 <template>
-    
-<div>
-	<center><h1 class="display-4 mb-4">Welcome, {{ user.firstName}} {{user.lastName}}</h1></center>
-	<table class="table table-bordered mb-5">
-		<thead class="thead-default">
-				<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Day</th>
-						<th>Start Time</th>
-						<th>End Time</th>
-						<th>Location</th>
-				</tr>
-		</thead>
+	<div class="d-flex flex-column">
+		<h1 class="align-self-center display-4 mb-4">Welcome, {{ user.firstName}} {{user.lastName}}</h1>
+		<div class="alert align-self-center">
+			<alert v-if="alert" :message="alert"></alert>
+		</div>
+		<table class="table table-bordered mb-5">
+			<thead class="thead-default">
+					<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Day</th>
+							<th>Start Time</th>
+							<th>End Time</th>
+							<th>Location</th>
+					</tr>
+			</thead>
 			<tbody>
 					<tr v-for="c in user.classes">
 
@@ -31,16 +33,20 @@
 </template>
 
 <style lang="sass" scoped>
+	.alert
+		width: 83%
 	table
 		width: 80%
 		margin: 0 auto
 </style>
 
 <script>
+import Alert from './Alert'
 export default {
   data() {
     return {
-      user: {}
+			user: {},
+			alert: ''
     };
   },
   methods: {
@@ -52,7 +58,14 @@ export default {
     }
   },
   created() {
+    if (this.$route.params.alert)
+      this.alert = this.$route.params.alert;
     this.getUser();
-  }
+  },
+	components: {
+		Alert
+	}
+
+	
 };
 </script>

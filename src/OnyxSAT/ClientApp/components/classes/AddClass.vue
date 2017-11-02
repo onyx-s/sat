@@ -13,13 +13,13 @@
         <fieldset class="form-group">
           <label>Day</label>
           <select input="text" name="Days" class="form-control" v-validate="{required: true}" v-model="classGroup.dayOfWeek">
-            <option value="monday">Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thurdsay">Thursday</option>
-            <option value="friday">Friday</option>
-            <option value="saturday">Saturday</option>
-            <option value="sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
           </select>
         </fieldset>
         <fieldset class="form-group">
@@ -35,8 +35,10 @@
             <input type="text" name="location" class="form-control" v-validate="{required: true}" v-model="classGroup.location" />
         </fieldset>
         <fieldset class="form-group">
-          <label>Teacher ID</label>
-          <input type="text" name="teacherId" class="form-control" v-validate="{required: true}" v-model="classGroup.teacherId" />
+          <label>Teacher Name</label>
+          <select type="text" name="teacherId" class="form-control" v-validate="{required: true}" v-model="selectedUser">
+            <option v-for="u in users" :value="u.userId">{{ u.firstName }} {{ u.lastName }}</option>
+          </select>
         </fieldset>
         <br>
         <button type="submit" class="submit btn btn-default mb-5">Submit</button>
@@ -48,26 +50,38 @@
 export default {
   data() {
     return {
-      classGroup: {}
+      classGroup: {},
+      users: [],
+      selectedUser: ''
     }
   },
   methods: {
     addClass() {
       if (!this.errors.all().length) {
+        console.log(this.classGroup);
         this.axios.post('/api/classes/', {
           name: this.classGroup.name,
           dayOfWeek: this.classGroup.dayOfWeek,
           startTime: this.classGroup.startTime,
           endTime: this.classGroup.endTime,
           location: this.classGroup.location,
-          userId: this.classGroup.teacherId
+          userId: this.selectedUser
         })
           .then((response) => {
-            this.$router.push({ name: 'classes', params: { alert: 'Class Added' } });
+            this.$router.push({ name: 'home', params: { alert: 'Class Added' } });
           })
           .catch(error => console.log(error));
       }
+    },
+    getUsers() {
+      this.axios.get('/api/users/')
+        .then(response => this.users = response.data)
+        .catch(error => console.log(error))
+        console.log(this.users);
     }
+  },
+  created() {
+    this.getUsers();
   }
 }
 </script>
@@ -77,6 +91,7 @@ form
   text-align: center
   display: inline
 
-
+select[name="teacherId"]
+  width: 500px
 
 </style>

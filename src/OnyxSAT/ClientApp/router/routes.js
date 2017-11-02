@@ -10,7 +10,7 @@ import UserDetailsEdit from '@/components/users/UserDetailsEdit';
 import AddClass from '@/components/classes/AddClass';
 
 export default [
-    { path: '/', component: Home },
+    { path: '/', name: 'home', component: Home },
     { path: '*', component: NotFound },
     { path: '/login', component: Login },
     { path: '/users', name: 'users', component: Users },
