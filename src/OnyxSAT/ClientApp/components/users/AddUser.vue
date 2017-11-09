@@ -59,6 +59,7 @@ export default {
           studentId: this.user.studentId || null
         })
           .then((response) => {
+            document.getElementById("loading").style.display = "block";
             this.$router.push({ name: 'users', params: { alert: 'User Added' } });
           })
           .catch(error => console.log(error));
@@ -70,12 +71,15 @@ export default {
   }
 }
 </script>
-<style lang="sass" scoped>
-form
-  max-width: 500px
-  text-align: center
-  display: inline
+<style scoped>
+form {
+  max-width: 500px;
+  text-align: center;
+  display: inline;
+}
 
-#studentId, #staffId
+#studentId, #staffId {
+  
+}
 
 </style>
