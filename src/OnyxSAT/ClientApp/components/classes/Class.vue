@@ -17,7 +17,7 @@
             <td>{{ a.user.studentId }}</td>
             <td>{{ a.user.mobile }}</td>
             <td>
-              <select type="text" name="attended" class="form-control" v-validate="{required: true}">
+              <select type="text" name="attended" class="form-control" v-validate="{required: true}" v-model="attended">
                 <option value="true" selected>Yes</option>
                 <option value="false">No</option>
               </select>
@@ -26,6 +26,7 @@
         </tbody>
       </table>
       <div class="mb-5" style="width: 600px;">
+        <button class="btn btn-default text-xs-right float-left" v-on:click="saveAttendances()">Save</button>
         <button class="btn btn-default text-xs-right float-right" v-on:click="markAllPresent()">Change all to present</button>
       </div>
     </template>
@@ -40,6 +41,7 @@ export default {
   data() {
     return {
       cl: [],
+      attended: [],
       classNotFound: false
     }
   },
@@ -58,6 +60,30 @@ export default {
       for (var i = 0; i < options.length; i++) {
         if (options[i].value === "true") {
           options[i].selected = "selected";
+        }
+      }
+    },
+    saveAttendances() {
+      let vClass = this.cl.enrolments;
+      for(var i = 0; i < vClass.length; i++) {
+        //Loop through users
+        if (attended[i] == "true") {
+          //If attended is makred as yes
+          if (!this.errors.all().length) {
+            //Create attendance for that user
+            this.axios.post('/api/attendances', {
+              dateDate: this.cl.dateTime,
+              verified: true,
+              cardNo: i.cards[0].cardNo,
+              roomNumber: cl.roomNumber,
+              card: i.cards[0],
+              session: cl.session[cl.session.length-1]
+            })
+              .catch(error => console.log(error));
+          }
+        } else {
+          this.axios.delete('/api/attendances/' + cl.session.length-1)
+          .catch(error => console.log(error));
         }
       }
     }
