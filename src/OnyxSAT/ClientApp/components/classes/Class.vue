@@ -23,7 +23,7 @@
             <td>{{ a.user.studentId }}</td>
             <td>{{ a.user.mobile }}</td>
             <td>
-              <select type="text" name="attended" class="form-control" v-validate="{required: true}" v-model="attended">
+              <select v-if="classGroup.currentSession" type="text" name="attended" class="form-control" v-validate="'required'">
                 <option value="true">Yes</option>
                 <option value="false" :selected="!studentAttended(a.user.cards)">No</option>
               </select>
@@ -57,7 +57,8 @@ export default {
       this.axios.get('/api/classes/' + id)
         .then(response => {
           this.classGroup = response.data;
-          this.setSession();
+          if(this.classGroup.sessions.length)
+            this.setSession();
           })
         .catch(error => {
           if (error.response.status == 404)
@@ -80,7 +81,6 @@ export default {
     },
     studentAttended(cards) {
       // checks if any of the cards have an attendance in the current session
-      if (!cards) return;
       return cards.some(card => {
         return this.classGroup.currentSession.attendances.some(attendance => card.cardNo == attendance.cardNo)     
       });

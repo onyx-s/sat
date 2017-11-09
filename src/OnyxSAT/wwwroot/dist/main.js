@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a79baa41a94e524ccc8b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d2cf671ce3058084ea43"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -11379,7 +11379,7 @@ module.exports = vendor_38bf6497434bc1782993;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_432d0be6_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_404_vue__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c4681366_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_404_vue__ = __webpack_require__(67);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -11398,7 +11398,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_432d0be6_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_404_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c4681366_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_404_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -11414,9 +11414,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-432d0be6", Component.options)
+    hotAPI.createRecord("data-v-c4681366", Component.options)
   } else {
-    hotAPI.reload("data-v-432d0be6", Component.options)
+    hotAPI.reload("data-v-c4681366", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -11463,7 +11463,7 @@ exports = module.exports = __webpack_require__(2)(true);
 
 
 // module
-exports.push([module.i, "\n#loading {\r\n  opacity: 1;\r\n  display: none;\r\n  left: 0px;\r\n  top: 0px;\r\n  width: 100%;\r\n  height: 100%;\r\n  position: fixed;\r\n  background: rgba(0,0,0,0.5);\r\n  z-index: 5;\n}\n.sk-fading-circle {\r\n  margin: 22% auto;\r\n  width: 70px;\r\n  height: 70px;\r\n  position: relative;\n}\n.sk-fading-circle .sk-circle {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\n}\n.sk-fading-circle .sk-circle:before {\r\n  content: '';\r\n  display: block;\r\n  margin: 0 auto;\r\n  width: 15%;\r\n  height: 15%;\r\n  background-color: #fff;\r\n  border-radius: 100%;\r\n  -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\r\n          animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\n}\n.sk-fading-circle .sk-circle2 {\r\n  -webkit-transform: rotate(30deg);\r\n          transform: rotate(30deg);\n}\n.sk-fading-circle .sk-circle3 {\r\n  -webkit-transform: rotate(60deg);\r\n          transform: rotate(60deg);\n}\n.sk-fading-circle .sk-circle4 {\r\n  -webkit-transform: rotate(90deg);\r\n          transform: rotate(90deg);\n}\n.sk-fading-circle .sk-circle5 {\r\n  -webkit-transform: rotate(120deg);\r\n          transform: rotate(120deg);\n}\n.sk-fading-circle .sk-circle6 {\r\n  -webkit-transform: rotate(150deg);\r\n          transform: rotate(150deg);\n}\n.sk-fading-circle .sk-circle7 {\r\n  -webkit-transform: rotate(180deg);\r\n          transform: rotate(180deg);\n}\n.sk-fading-circle .sk-circle8 {\r\n  -webkit-transform: rotate(210deg);\r\n          transform: rotate(210deg);\n}\n.sk-fading-circle .sk-circle9 {\r\n  -webkit-transform: rotate(240deg);\r\n          transform: rotate(240deg);\n}\n.sk-fading-circle .sk-circle10 {\r\n  -webkit-transform: rotate(270deg);\r\n          transform: rotate(270deg);\n}\n.sk-fading-circle .sk-circle11 {\r\n  -webkit-transform: rotate(300deg);\r\n          transform: rotate(300deg);\n}\n.sk-fading-circle .sk-circle12 {\r\n  -webkit-transform: rotate(330deg);\r\n          transform: rotate(330deg);\n}\n.sk-fading-circle .sk-circle2:before {\r\n  -webkit-animation-delay: -1.1s;\r\n          animation-delay: -1.1s;\n}\n.sk-fading-circle .sk-circle3:before {\r\n  -webkit-animation-delay: -1s;\r\n          animation-delay: -1s;\n}\n.sk-fading-circle .sk-circle4:before {\r\n  -webkit-animation-delay: -0.9s;\r\n          animation-delay: -0.9s;\n}\n.sk-fading-circle .sk-circle5:before {\r\n  -webkit-animation-delay: -0.8s;\r\n          animation-delay: -0.8s;\n}\n.sk-fading-circle .sk-circle6:before {\r\n  -webkit-animation-delay: -0.7s;\r\n          animation-delay: -0.7s;\n}\n.sk-fading-circle .sk-circle7:before {\r\n  -webkit-animation-delay: -0.6s;\r\n          animation-delay: -0.6s;\n}\n.sk-fading-circle .sk-circle8:before {\r\n  -webkit-animation-delay: -0.5s;\r\n          animation-delay: -0.5s;\n}\n.sk-fading-circle .sk-circle9:before {\r\n  -webkit-animation-delay: -0.4s;\r\n          animation-delay: -0.4s;\n}\n.sk-fading-circle .sk-circle10:before {\r\n  -webkit-animation-delay: -0.3s;\r\n          animation-delay: -0.3s;\n}\n.sk-fading-circle .sk-circle11:before {\r\n  -webkit-animation-delay: -0.2s;\r\n          animation-delay: -0.2s;\n}\n.sk-fading-circle .sk-circle12:before {\r\n  -webkit-animation-delay: -0.1s;\r\n          animation-delay: -0.1s;\n}\n@-webkit-keyframes sk-circleFadeDelay {\n0%, 39%, 100% { opacity: 0;\n}\n40% { opacity: 1;\n}\n}\n@keyframes sk-circleFadeDelay {\n0%, 39%, 100% { opacity: 0;\n}\n40% { opacity: 1;\n}\n}\r\n", "", {"version":3,"sources":["C:/Users/kyle-/Documents/GitHub/sat/src/onyxsat/ClientApp/components/ClientApp/components/Loading.vue?ab445188"],"names":[],"mappings":";AAqCA;EACA,WAAA;EACA,cAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,aAAA;EACA,gBAAA;EACA,4BAAA;EACA,WAAA;CACA;AACA;EACA,iBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;CACA;AACA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,QAAA;EACA,OAAA;CACA;AAEA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,WAAA;EACA,YAAA;EACA,uBAAA;EACA,oBAAA;EACA,qEAAA;UACA,6DAAA;CACA;AACA;EACA,iCAAA;UAEA,yBAAA;CACA;AACA;EACA,iCAAA;UAEA,yBAAA;CACA;AACA;EACA,iCAAA;UAEA,yBAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,6BAAA;UACA,qBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AAEA;AACA,gBAAA,WAAA;CAAA;AACA,MAAA,WAAA;CAAA;CACA;AAEA;AACA,gBAAA,WAAA;CAAA;AACA,MAAA,WAAA;CAAA;CACA","file":"Loading.vue","sourcesContent":["<template>\r\n    <div id=\"loading\" class=\"align-items-center justify-content-center\">\r\n      <div class=\"sk-fading-circle\">\r\n        <div class=\"sk-circle1 sk-circle\"></div>\r\n        <div class=\"sk-circle2 sk-circle\"></div>\r\n        <div class=\"sk-circle3 sk-circle\"></div>\r\n        <div class=\"sk-circle4 sk-circle\"></div>\r\n        <div class=\"sk-circle5 sk-circle\"></div>\r\n        <div class=\"sk-circle6 sk-circle\"></div>\r\n        <div class=\"sk-circle7 sk-circle\"></div>\r\n        <div class=\"sk-circle8 sk-circle\"></div>\r\n        <div class=\"sk-circle9 sk-circle\"></div>\r\n        <div class=\"sk-circle10 sk-circle\"></div>\r\n        <div class=\"sk-circle11 sk-circle\"></div>\r\n        <div class=\"sk-circle12 sk-circle\"></div>\r\n      </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'loading',\r\n  data() {\r\n    return {\r\n    }\r\n  },\r\n  methods: {\r\n    created() {\r\n      this.$nextTick(() => {\r\n        this.refresh();\r\n      });\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style>\r\n#loading {\r\n  opacity: 1;\r\n  display: none;\r\n  left: 0px;\r\n  top: 0px;\r\n  width: 100%;\r\n  height: 100%;\r\n  position: fixed;\r\n  background: rgba(0,0,0,0.5);\r\n  z-index: 5;\r\n}\r\n.sk-fading-circle {\r\n  margin: 22% auto;\r\n  width: 70px;\r\n  height: 70px;\r\n  position: relative;\r\n}\r\n.sk-fading-circle .sk-circle {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\r\n}\r\n\r\n.sk-fading-circle .sk-circle:before {\r\n  content: '';\r\n  display: block;\r\n  margin: 0 auto;\r\n  width: 15%;\r\n  height: 15%;\r\n  background-color: #fff;\r\n  border-radius: 100%;\r\n  -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\r\n          animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\r\n}\r\n.sk-fading-circle .sk-circle2 {\r\n  -webkit-transform: rotate(30deg);\r\n      -ms-transform: rotate(30deg);\r\n          transform: rotate(30deg);\r\n}\r\n.sk-fading-circle .sk-circle3 {\r\n  -webkit-transform: rotate(60deg);\r\n      -ms-transform: rotate(60deg);\r\n          transform: rotate(60deg);\r\n}\r\n.sk-fading-circle .sk-circle4 {\r\n  -webkit-transform: rotate(90deg);\r\n      -ms-transform: rotate(90deg);\r\n          transform: rotate(90deg);\r\n}\r\n.sk-fading-circle .sk-circle5 {\r\n  -webkit-transform: rotate(120deg);\r\n      -ms-transform: rotate(120deg);\r\n          transform: rotate(120deg);\r\n}\r\n.sk-fading-circle .sk-circle6 {\r\n  -webkit-transform: rotate(150deg);\r\n      -ms-transform: rotate(150deg);\r\n          transform: rotate(150deg);\r\n}\r\n.sk-fading-circle .sk-circle7 {\r\n  -webkit-transform: rotate(180deg);\r\n      -ms-transform: rotate(180deg);\r\n          transform: rotate(180deg);\r\n}\r\n.sk-fading-circle .sk-circle8 {\r\n  -webkit-transform: rotate(210deg);\r\n      -ms-transform: rotate(210deg);\r\n          transform: rotate(210deg);\r\n}\r\n.sk-fading-circle .sk-circle9 {\r\n  -webkit-transform: rotate(240deg);\r\n      -ms-transform: rotate(240deg);\r\n          transform: rotate(240deg);\r\n}\r\n.sk-fading-circle .sk-circle10 {\r\n  -webkit-transform: rotate(270deg);\r\n      -ms-transform: rotate(270deg);\r\n          transform: rotate(270deg);\r\n}\r\n.sk-fading-circle .sk-circle11 {\r\n  -webkit-transform: rotate(300deg);\r\n      -ms-transform: rotate(300deg);\r\n          transform: rotate(300deg); \r\n}\r\n.sk-fading-circle .sk-circle12 {\r\n  -webkit-transform: rotate(330deg);\r\n      -ms-transform: rotate(330deg);\r\n          transform: rotate(330deg); \r\n}\r\n.sk-fading-circle .sk-circle2:before {\r\n  -webkit-animation-delay: -1.1s;\r\n          animation-delay: -1.1s; \r\n}\r\n.sk-fading-circle .sk-circle3:before {\r\n  -webkit-animation-delay: -1s;\r\n          animation-delay: -1s; \r\n}\r\n.sk-fading-circle .sk-circle4:before {\r\n  -webkit-animation-delay: -0.9s;\r\n          animation-delay: -0.9s; \r\n}\r\n.sk-fading-circle .sk-circle5:before {\r\n  -webkit-animation-delay: -0.8s;\r\n          animation-delay: -0.8s; \r\n}\r\n.sk-fading-circle .sk-circle6:before {\r\n  -webkit-animation-delay: -0.7s;\r\n          animation-delay: -0.7s; \r\n}\r\n.sk-fading-circle .sk-circle7:before {\r\n  -webkit-animation-delay: -0.6s;\r\n          animation-delay: -0.6s; \r\n}\r\n.sk-fading-circle .sk-circle8:before {\r\n  -webkit-animation-delay: -0.5s;\r\n          animation-delay: -0.5s; \r\n}\r\n.sk-fading-circle .sk-circle9:before {\r\n  -webkit-animation-delay: -0.4s;\r\n          animation-delay: -0.4s;\r\n}\r\n.sk-fading-circle .sk-circle10:before {\r\n  -webkit-animation-delay: -0.3s;\r\n          animation-delay: -0.3s;\r\n}\r\n.sk-fading-circle .sk-circle11:before {\r\n  -webkit-animation-delay: -0.2s;\r\n          animation-delay: -0.2s;\r\n}\r\n.sk-fading-circle .sk-circle12:before {\r\n  -webkit-animation-delay: -0.1s;\r\n          animation-delay: -0.1s;\r\n}\r\n\r\n@-webkit-keyframes sk-circleFadeDelay {\r\n  0%, 39%, 100% { opacity: 0; }\r\n  40% { opacity: 1; }\r\n}\r\n\r\n@keyframes sk-circleFadeDelay {\r\n  0%, 39%, 100% { opacity: 0; }\r\n  40% { opacity: 1; } \r\n}\r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n#loading {\r\n  opacity: 1;\r\n  display: none;\r\n  left: 0px;\r\n  top: 0px;\r\n  width: 100%;\r\n  height: 100%;\r\n  position: fixed;\r\n  background: rgba(0,0,0,0.5);\r\n  z-index: 5;\n}\n.sk-fading-circle {\r\n  margin: 22% auto;\r\n  width: 70px;\r\n  height: 70px;\r\n  position: relative;\n}\n.sk-fading-circle .sk-circle {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\n}\n.sk-fading-circle .sk-circle:before {\r\n  content: '';\r\n  display: block;\r\n  margin: 0 auto;\r\n  width: 15%;\r\n  height: 15%;\r\n  background-color: #fff;\r\n  border-radius: 100%;\r\n  -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\r\n          animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\n}\n.sk-fading-circle .sk-circle2 {\r\n  -webkit-transform: rotate(30deg);\r\n          transform: rotate(30deg);\n}\n.sk-fading-circle .sk-circle3 {\r\n  -webkit-transform: rotate(60deg);\r\n          transform: rotate(60deg);\n}\n.sk-fading-circle .sk-circle4 {\r\n  -webkit-transform: rotate(90deg);\r\n          transform: rotate(90deg);\n}\n.sk-fading-circle .sk-circle5 {\r\n  -webkit-transform: rotate(120deg);\r\n          transform: rotate(120deg);\n}\n.sk-fading-circle .sk-circle6 {\r\n  -webkit-transform: rotate(150deg);\r\n          transform: rotate(150deg);\n}\n.sk-fading-circle .sk-circle7 {\r\n  -webkit-transform: rotate(180deg);\r\n          transform: rotate(180deg);\n}\n.sk-fading-circle .sk-circle8 {\r\n  -webkit-transform: rotate(210deg);\r\n          transform: rotate(210deg);\n}\n.sk-fading-circle .sk-circle9 {\r\n  -webkit-transform: rotate(240deg);\r\n          transform: rotate(240deg);\n}\n.sk-fading-circle .sk-circle10 {\r\n  -webkit-transform: rotate(270deg);\r\n          transform: rotate(270deg);\n}\n.sk-fading-circle .sk-circle11 {\r\n  -webkit-transform: rotate(300deg);\r\n          transform: rotate(300deg);\n}\n.sk-fading-circle .sk-circle12 {\r\n  -webkit-transform: rotate(330deg);\r\n          transform: rotate(330deg);\n}\n.sk-fading-circle .sk-circle2:before {\r\n  -webkit-animation-delay: -1.1s;\r\n          animation-delay: -1.1s;\n}\n.sk-fading-circle .sk-circle3:before {\r\n  -webkit-animation-delay: -1s;\r\n          animation-delay: -1s;\n}\n.sk-fading-circle .sk-circle4:before {\r\n  -webkit-animation-delay: -0.9s;\r\n          animation-delay: -0.9s;\n}\n.sk-fading-circle .sk-circle5:before {\r\n  -webkit-animation-delay: -0.8s;\r\n          animation-delay: -0.8s;\n}\n.sk-fading-circle .sk-circle6:before {\r\n  -webkit-animation-delay: -0.7s;\r\n          animation-delay: -0.7s;\n}\n.sk-fading-circle .sk-circle7:before {\r\n  -webkit-animation-delay: -0.6s;\r\n          animation-delay: -0.6s;\n}\n.sk-fading-circle .sk-circle8:before {\r\n  -webkit-animation-delay: -0.5s;\r\n          animation-delay: -0.5s;\n}\n.sk-fading-circle .sk-circle9:before {\r\n  -webkit-animation-delay: -0.4s;\r\n          animation-delay: -0.4s;\n}\n.sk-fading-circle .sk-circle10:before {\r\n  -webkit-animation-delay: -0.3s;\r\n          animation-delay: -0.3s;\n}\n.sk-fading-circle .sk-circle11:before {\r\n  -webkit-animation-delay: -0.2s;\r\n          animation-delay: -0.2s;\n}\n.sk-fading-circle .sk-circle12:before {\r\n  -webkit-animation-delay: -0.1s;\r\n          animation-delay: -0.1s;\n}\n@-webkit-keyframes sk-circleFadeDelay {\n0%, 39%, 100% { opacity: 0;\n}\n40% { opacity: 1;\n}\n}\n@keyframes sk-circleFadeDelay {\n0%, 39%, 100% { opacity: 0;\n}\n40% { opacity: 1;\n}\n}\r\n", "", {"version":3,"sources":["C:/Users/Misbil/Documents/IT/Diploma/Semester 2/Implementation 1 Cluster/sat/src/OnyxSAT/ClientApp/components/ClientApp/components/Loading.vue?ab445188"],"names":[],"mappings":";AAqCA;EACA,WAAA;EACA,cAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,aAAA;EACA,gBAAA;EACA,4BAAA;EACA,WAAA;CACA;AACA;EACA,iBAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;CACA;AACA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,QAAA;EACA,OAAA;CACA;AAEA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,WAAA;EACA,YAAA;EACA,uBAAA;EACA,oBAAA;EACA,qEAAA;UACA,6DAAA;CACA;AACA;EACA,iCAAA;UAEA,yBAAA;CACA;AACA;EACA,iCAAA;UAEA,yBAAA;CACA;AACA;EACA,iCAAA;UAEA,yBAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,kCAAA;UAEA,0BAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,6BAAA;UACA,qBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AACA;EACA,+BAAA;UACA,uBAAA;CACA;AAEA;AACA,gBAAA,WAAA;CAAA;AACA,MAAA,WAAA;CAAA;CACA;AAEA;AACA,gBAAA,WAAA;CAAA;AACA,MAAA,WAAA;CAAA;CACA","file":"Loading.vue","sourcesContent":["<template>\r\n    <div id=\"loading\" class=\"align-items-center justify-content-center\">\r\n      <div class=\"sk-fading-circle\">\r\n        <div class=\"sk-circle1 sk-circle\"></div>\r\n        <div class=\"sk-circle2 sk-circle\"></div>\r\n        <div class=\"sk-circle3 sk-circle\"></div>\r\n        <div class=\"sk-circle4 sk-circle\"></div>\r\n        <div class=\"sk-circle5 sk-circle\"></div>\r\n        <div class=\"sk-circle6 sk-circle\"></div>\r\n        <div class=\"sk-circle7 sk-circle\"></div>\r\n        <div class=\"sk-circle8 sk-circle\"></div>\r\n        <div class=\"sk-circle9 sk-circle\"></div>\r\n        <div class=\"sk-circle10 sk-circle\"></div>\r\n        <div class=\"sk-circle11 sk-circle\"></div>\r\n        <div class=\"sk-circle12 sk-circle\"></div>\r\n      </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'loading',\r\n  data() {\r\n    return {\r\n    }\r\n  },\r\n  methods: {\r\n    created() {\r\n      this.$nextTick(() => {\r\n        this.refresh();\r\n      });\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style>\r\n#loading {\r\n  opacity: 1;\r\n  display: none;\r\n  left: 0px;\r\n  top: 0px;\r\n  width: 100%;\r\n  height: 100%;\r\n  position: fixed;\r\n  background: rgba(0,0,0,0.5);\r\n  z-index: 5;\r\n}\r\n.sk-fading-circle {\r\n  margin: 22% auto;\r\n  width: 70px;\r\n  height: 70px;\r\n  position: relative;\r\n}\r\n.sk-fading-circle .sk-circle {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\r\n}\r\n\r\n.sk-fading-circle .sk-circle:before {\r\n  content: '';\r\n  display: block;\r\n  margin: 0 auto;\r\n  width: 15%;\r\n  height: 15%;\r\n  background-color: #fff;\r\n  border-radius: 100%;\r\n  -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\r\n          animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;\r\n}\r\n.sk-fading-circle .sk-circle2 {\r\n  -webkit-transform: rotate(30deg);\r\n      -ms-transform: rotate(30deg);\r\n          transform: rotate(30deg);\r\n}\r\n.sk-fading-circle .sk-circle3 {\r\n  -webkit-transform: rotate(60deg);\r\n      -ms-transform: rotate(60deg);\r\n          transform: rotate(60deg);\r\n}\r\n.sk-fading-circle .sk-circle4 {\r\n  -webkit-transform: rotate(90deg);\r\n      -ms-transform: rotate(90deg);\r\n          transform: rotate(90deg);\r\n}\r\n.sk-fading-circle .sk-circle5 {\r\n  -webkit-transform: rotate(120deg);\r\n      -ms-transform: rotate(120deg);\r\n          transform: rotate(120deg);\r\n}\r\n.sk-fading-circle .sk-circle6 {\r\n  -webkit-transform: rotate(150deg);\r\n      -ms-transform: rotate(150deg);\r\n          transform: rotate(150deg);\r\n}\r\n.sk-fading-circle .sk-circle7 {\r\n  -webkit-transform: rotate(180deg);\r\n      -ms-transform: rotate(180deg);\r\n          transform: rotate(180deg);\r\n}\r\n.sk-fading-circle .sk-circle8 {\r\n  -webkit-transform: rotate(210deg);\r\n      -ms-transform: rotate(210deg);\r\n          transform: rotate(210deg);\r\n}\r\n.sk-fading-circle .sk-circle9 {\r\n  -webkit-transform: rotate(240deg);\r\n      -ms-transform: rotate(240deg);\r\n          transform: rotate(240deg);\r\n}\r\n.sk-fading-circle .sk-circle10 {\r\n  -webkit-transform: rotate(270deg);\r\n      -ms-transform: rotate(270deg);\r\n          transform: rotate(270deg);\r\n}\r\n.sk-fading-circle .sk-circle11 {\r\n  -webkit-transform: rotate(300deg);\r\n      -ms-transform: rotate(300deg);\r\n          transform: rotate(300deg); \r\n}\r\n.sk-fading-circle .sk-circle12 {\r\n  -webkit-transform: rotate(330deg);\r\n      -ms-transform: rotate(330deg);\r\n          transform: rotate(330deg); \r\n}\r\n.sk-fading-circle .sk-circle2:before {\r\n  -webkit-animation-delay: -1.1s;\r\n          animation-delay: -1.1s; \r\n}\r\n.sk-fading-circle .sk-circle3:before {\r\n  -webkit-animation-delay: -1s;\r\n          animation-delay: -1s; \r\n}\r\n.sk-fading-circle .sk-circle4:before {\r\n  -webkit-animation-delay: -0.9s;\r\n          animation-delay: -0.9s; \r\n}\r\n.sk-fading-circle .sk-circle5:before {\r\n  -webkit-animation-delay: -0.8s;\r\n          animation-delay: -0.8s; \r\n}\r\n.sk-fading-circle .sk-circle6:before {\r\n  -webkit-animation-delay: -0.7s;\r\n          animation-delay: -0.7s; \r\n}\r\n.sk-fading-circle .sk-circle7:before {\r\n  -webkit-animation-delay: -0.6s;\r\n          animation-delay: -0.6s; \r\n}\r\n.sk-fading-circle .sk-circle8:before {\r\n  -webkit-animation-delay: -0.5s;\r\n          animation-delay: -0.5s; \r\n}\r\n.sk-fading-circle .sk-circle9:before {\r\n  -webkit-animation-delay: -0.4s;\r\n          animation-delay: -0.4s;\r\n}\r\n.sk-fading-circle .sk-circle10:before {\r\n  -webkit-animation-delay: -0.3s;\r\n          animation-delay: -0.3s;\r\n}\r\n.sk-fading-circle .sk-circle11:before {\r\n  -webkit-animation-delay: -0.2s;\r\n          animation-delay: -0.2s;\r\n}\r\n.sk-fading-circle .sk-circle12:before {\r\n  -webkit-animation-delay: -0.1s;\r\n          animation-delay: -0.1s;\r\n}\r\n\r\n@-webkit-keyframes sk-circleFadeDelay {\r\n  0%, 39%, 100% { opacity: 0; }\r\n  40% { opacity: 1; }\r\n}\r\n\r\n@keyframes sk-circleFadeDelay {\r\n  0%, 39%, 100% { opacity: 0; }\r\n  40% { opacity: 1; } \r\n}\r\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -11477,7 +11477,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.alert[data-v-7530717a] {\n  width: 83%;\n}\ntable[data-v-7530717a] {\n  width: 80%;\n  margin: 0 auto;\n}\n.btn[data-v-7530717a] {\n  margin-left: 111px;\n}\n", ""]);
+exports.push([module.i, "\n.alert[data-v-bbc5058c] {\n  width: 83%;\n}\ntable[data-v-bbc5058c] {\n  width: 80%;\n  margin: 0 auto;\n}\n.btn[data-v-bbc5058c] {\n  margin-left: 111px;\n}\n", ""]);
 
 // exports
 
@@ -11519,7 +11519,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-4ec2a45e] {\n  max-width: 400px;\n}\nh1[data-v-4ec2a45e] {\n  -ms-flex-item-align: start;\n      -ms-grid-row-align: start;\n      align-self: start;\n  font-size: 2.5em;\n  padding-bottom: 6px;\n}\na[data-v-4ec2a45e] {\n  border: 1px solid #ea4335;\n  border-radius: 10px;\n  color: #444;\n  font-size: 2em;\n  padding: 30px;\n  min-width: 215px;\n}\na[data-v-4ec2a45e]:hover {\n    text-decoration: none;\n    border-color: blue;\n}\nimg[data-v-4ec2a45e] {\n  height: 2em;\n  width: 2em;\n}\n", ""]);
+exports.push([module.i, "\n.container[data-v-8111dec4] {\n  max-width: 400px;\n}\nh1[data-v-8111dec4] {\n  -ms-flex-item-align: start;\n      -ms-grid-row-align: start;\n      align-self: start;\n  font-size: 2.5em;\n  padding-bottom: 6px;\n}\na[data-v-8111dec4] {\n  border: 1px solid #ea4335;\n  border-radius: 10px;\n  color: #444;\n  font-size: 2em;\n  padding: 30px;\n  min-width: 215px;\n}\na[data-v-8111dec4]:hover {\n    text-decoration: none;\n    border-color: blue;\n}\nimg[data-v-8111dec4] {\n  height: 2em;\n  width: 2em;\n}\n", ""]);
 
 // exports
 
@@ -11533,7 +11533,7 @@ exports = module.exports = __webpack_require__(2)(true);
 
 
 // module
-exports.push([module.i, "\n.dropdown {\r\n    display: inline;\n}\n.content-row {\r\n    display: inline;\r\n    padding-bottom: 15px;\n}\n.add-student {\r\n    display: inline;\r\n    position: relative;\r\n    width: 150px;\r\n    -ms-flex-item-align: right;\r\n        -ms-grid-row-align: right;\r\n        align-self: right;\n}\r\n", "", {"version":3,"sources":["C:/Users/kyle-/Documents/GitHub/sat/src/onyxsat/ClientApp/components/users/ClientApp/components/users/Users.vue?6a498b11"],"names":[],"mappings":";AA4HA;IACA,gBAAA;CACA;AACA;IACA,gBAAA;IACA,qBAAA;CACA;AACA;IACA,gBAAA;IACA,mBAAA;IACA,aAAA;IACA,2BAAA;QAAA,0BAAA;QAAA,kBAAA;CACA","file":"Users.vue","sourcesContent":["<template>\r\n    <div class=\"container d-flex flex-column\">\r\n        <h1 class=\"display-4 align-self-center\">All Users</h1>\r\n        <div class=\"content-row\">\r\n            <alert v-if=\"alert\" :message=\"alert\"></alert>\r\n            <!--\r\n            <div class=\"dropdown\">\r\n                <button class=\"btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Filter by block\r\n                    <span class=\"caret\"></span>\r\n                </button>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li>A</li>\r\n                    <li>B</li>\r\n                    <li>C</li>\r\n                </ul>\r\n            </div>\r\n            -->\r\n            <router-link to=\"/users/add\" tag=\"button\" class=\"btn btn-default\">Add User</router-link>\r\n            <button id=\"btn-Delete\" tag=\"button\" class=\"btn btn-danger float-right\" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\" disabled>Delete Selected</button>\r\n        </div>\r\n        <div class=\"modal bs-example-modal-sm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">\r\n            <div class=\"modal-dialog modal-sm\" role=\"document\">\r\n                <div class=\"modal-content\">\r\n                    <div class=\"modal-header\">\r\n                        <a>Are you sure?</a>\r\n                    </div>\r\n                    <div class=\"modal-footer\">\r\n                        <button  class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\r\n                        <button v-on:click=\"deleteUsers()\" class=\"btn btn-primary\" data-dismiss=\"modal\">Yes</button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <table class=\"table table-bordered mb-5\">\r\n            <thead class=\"thead-default\">\r\n                <tr>\r\n                    <th>ID</th>\r\n                    <th>Firstname</th>\r\n                    <th>Lastname</th>\r\n                    <th>Email</th>\r\n                    <th>Mobile</th>\r\n                    <th></th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr v-for=\"u in users\">\r\n                    <td>\r\n                        <router-link :to=\"u.userId.toString()\" append>{{ u.userId }}</router-link>\r\n                    </td>\r\n                    <td>{{ u.firstName }}</td>\r\n                    <td>{{ u.lastName }}</td>\r\n                    <td>{{ u.email }}</td>\r\n                    <td>{{ u.mobile }}</td>\r\n                    <td><input type=\"checkbox\" class=\"align-self-center\" :id=\"u.userId\" @click=\"toggleCheckbox(u.userId), btnDisable()\"/></td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\nimport Alert from '../Alert'\r\nexport default {\r\n    data() {\r\n        return {\r\n            checkedNames: [],\r\n            users: [],\r\n            alert: ''\r\n        }\r\n    },\r\n    methods: {\r\n        disableLoading() {\r\n            document.getElementById(\"loading\").style.display = \"none\";\r\n        },\r\n        //Fetches the list of users from database\r\n        getUsers() {\r\n            this.axios.get('/api/users/')\r\n                .then(response => this.users = response.data)\r\n                .catch(error => console.log(error))\r\n        },\r\n        //Deletes the selected users\r\n        deleteUsers() {\r\n            for (let i = 0; i < this.checkedNames.length; i++) {\r\n                this.axios.delete('/api/users/' + this.checkedNames[i]);\r\n            }\r\n            //Refresh the page and alert that users were deleted\r\n            //this.$router.push({ name: 'users', params: { alert: 'User Added' } });\r\n            document.getElementById(\"loading\").style.display = \"block\";\r\n            location.reload(true);\r\n        },\r\n        //Adds checked items to array of items to delete\r\n        toggleCheckbox(id) {\r\n            if (document.getElementById(id).checked === true) {\r\n                this.checkedNames.push(id);\r\n            } else {\r\n                this.checkedNames.splice(this.checkedNames.indexOf(id),1);\r\n            }\r\n        },\r\n        //Toggles the delete users button depending on checked boxes\r\n        btnDisable() {\r\n            let e_id = event.target;\r\n            let e_btn = document.getElementById('btn-Delete');\r\n            if (e_id.checked === true) {\r\n                e_btn.disabled = false;\r\n                e_btn.active = true;\r\n            } else if (e_id.checked === false) {\r\n                e_btn.active = false;\r\n                e_btn.disabled = true;\r\n            }\r\n        }\r\n    },\r\n    created() {\r\n        if (this.$route.params.alert)\r\n            this.alert = this.$route.params.alert;\r\n        this.getUsers();\r\n        this.disableLoading();\r\n    },\r\n    components: {\r\n        Alert\r\n    }\r\n}\r\n</script>\r\n\r\n<style>\r\n.dropdown {\r\n    display: inline;\r\n}\r\n.content-row {\r\n    display: inline;\r\n    padding-bottom: 15px;\r\n}\r\n.add-student {\r\n    display: inline;\r\n    position: relative;\r\n    width: 150px;\r\n    align-self: right;\r\n}\r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n.dropdown {\r\n    display: inline;\n}\n.content-row {\r\n    display: inline;\r\n    padding-bottom: 15px;\n}\n.add-student {\r\n    display: inline;\r\n    position: relative;\r\n    width: 150px;\r\n    -ms-flex-item-align: right;\r\n        -ms-grid-row-align: right;\r\n        align-self: right;\n}\r\n", "", {"version":3,"sources":["C:/Users/Misbil/Documents/IT/Diploma/Semester 2/Implementation 1 Cluster/sat/src/OnyxSAT/ClientApp/components/users/ClientApp/components/users/Users.vue?6a498b11"],"names":[],"mappings":";AA4HA;IACA,gBAAA;CACA;AACA;IACA,gBAAA;IACA,qBAAA;CACA;AACA;IACA,gBAAA;IACA,mBAAA;IACA,aAAA;IACA,2BAAA;QAAA,0BAAA;QAAA,kBAAA;CACA","file":"Users.vue","sourcesContent":["<template>\r\n    <div class=\"container d-flex flex-column\">\r\n        <h1 class=\"display-4 align-self-center\">All Users</h1>\r\n        <div class=\"content-row\">\r\n            <alert v-if=\"alert\" :message=\"alert\"></alert>\r\n            <!--\r\n            <div class=\"dropdown\">\r\n                <button class=\"btn-default dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">Filter by block\r\n                    <span class=\"caret\"></span>\r\n                </button>\r\n                <ul class=\"dropdown-menu\">\r\n                    <li>A</li>\r\n                    <li>B</li>\r\n                    <li>C</li>\r\n                </ul>\r\n            </div>\r\n            -->\r\n            <router-link to=\"/users/add\" tag=\"button\" class=\"btn btn-default\">Add User</router-link>\r\n            <button id=\"btn-Delete\" tag=\"button\" class=\"btn btn-danger float-right\" data-toggle=\"modal\" data-target=\".bs-example-modal-sm\" disabled>Delete Selected</button>\r\n        </div>\r\n        <div class=\"modal bs-example-modal-sm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\">\r\n            <div class=\"modal-dialog modal-sm\" role=\"document\">\r\n                <div class=\"modal-content\">\r\n                    <div class=\"modal-header\">\r\n                        <a>Are you sure?</a>\r\n                    </div>\r\n                    <div class=\"modal-footer\">\r\n                        <button  class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\r\n                        <button v-on:click=\"deleteUsers()\" class=\"btn btn-primary\" data-dismiss=\"modal\">Yes</button>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <table class=\"table table-bordered mb-5\">\r\n            <thead class=\"thead-default\">\r\n                <tr>\r\n                    <th>ID</th>\r\n                    <th>Firstname</th>\r\n                    <th>Lastname</th>\r\n                    <th>Email</th>\r\n                    <th>Mobile</th>\r\n                    <th></th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr v-for=\"u in users\">\r\n                    <td>\r\n                        <router-link :to=\"u.userId.toString()\" append>{{ u.userId }}</router-link>\r\n                    </td>\r\n                    <td>{{ u.firstName }}</td>\r\n                    <td>{{ u.lastName }}</td>\r\n                    <td>{{ u.email }}</td>\r\n                    <td>{{ u.mobile }}</td>\r\n                    <td><input type=\"checkbox\" class=\"align-self-center\" :id=\"u.userId\" @click=\"toggleCheckbox(u.userId), btnDisable()\"/></td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\nimport Alert from '../Alert'\r\nexport default {\r\n    data() {\r\n        return {\r\n            checkedNames: [],\r\n            users: [],\r\n            alert: ''\r\n        }\r\n    },\r\n    methods: {\r\n        disableLoading() {\r\n            document.getElementById(\"loading\").style.display = \"none\";\r\n        },\r\n        //Fetches the list of users from database\r\n        getUsers() {\r\n            this.axios.get('/api/users/')\r\n                .then(response => this.users = response.data)\r\n                .catch(error => console.log(error))\r\n        },\r\n        //Deletes the selected users\r\n        deleteUsers() {\r\n            for (let i = 0; i < this.checkedNames.length; i++) {\r\n                this.axios.delete('/api/users/' + this.checkedNames[i]);\r\n            }\r\n            //Refresh the page and alert that users were deleted\r\n            //this.$router.push({ name: 'users', params: { alert: 'User Added' } });\r\n            document.getElementById(\"loading\").style.display = \"block\";\r\n            location.reload(true);\r\n        },\r\n        //Adds checked items to array of items to delete\r\n        toggleCheckbox(id) {\r\n            if (document.getElementById(id).checked === true) {\r\n                this.checkedNames.push(id);\r\n            } else {\r\n                this.checkedNames.splice(this.checkedNames.indexOf(id),1);\r\n            }\r\n        },\r\n        //Toggles the delete users button depending on checked boxes\r\n        btnDisable() {\r\n            let e_id = event.target;\r\n            let e_btn = document.getElementById('btn-Delete');\r\n            if (e_id.checked === true) {\r\n                e_btn.disabled = false;\r\n                e_btn.active = true;\r\n            } else if (e_id.checked === false) {\r\n                e_btn.active = false;\r\n                e_btn.disabled = true;\r\n            }\r\n        }\r\n    },\r\n    created() {\r\n        if (this.$route.params.alert)\r\n            this.alert = this.$route.params.alert;\r\n        this.getUsers();\r\n        this.disableLoading();\r\n    },\r\n    components: {\r\n        Alert\r\n    }\r\n}\r\n</script>\r\n\r\n<style>\r\n.dropdown {\r\n    display: inline;\r\n}\r\n.content-row {\r\n    display: inline;\r\n    padding-bottom: 15px;\r\n}\r\n.add-student {\r\n    display: inline;\r\n    position: relative;\r\n    width: 150px;\r\n    align-self: right;\r\n}\r\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -11547,7 +11547,7 @@ exports = module.exports = __webpack_require__(2)(true);
 
 
 // module
-exports.push([module.i, "\nform[data-v-673aa4fa] {\r\n  max-width: 500px;\r\n  text-align: center;\r\n  display: inline;\n}\n#studentId[data-v-673aa4fa], #staffId[data-v-673aa4fa] {\n}\r\n\r\n", "", {"version":3,"sources":["C:/Users/kyle-/Documents/GitHub/sat/src/onyxsat/ClientApp/components/users/ClientApp/components/users/AddUser.vue?ffdeb7b2"],"names":[],"mappings":";AA0EA;EACA,iBAAA;EACA,mBAAA;EACA,gBAAA;CACA;AAEA;CAEA","file":"AddUser.vue","sourcesContent":["<template>\r\n  <div class=\"d-flex flex-column align-items-center container\">\r\n    <h1 class=\"display-4\">Add a User</h1>\r\n    <ul v-if=\"errors.any()\">\r\n      <li vb-for=\"error in errors.all()\"> {{ error }}</li>\r\n    </ul>\r\n    <section class=\"row w-100 d-flex align-items-center flex-column\">\r\n      <form @submit.prevent=\"addUser\" class=\"d-flex flex-column w-100 mb-3\">\r\n        <fieldset class=\"form-group\">\r\n          <label>First Name</label>\r\n          <input type=\"text\" name=\"First Name\" class=\"form-control\" v-validate=\"{required: true, alpha_spaces: true}\" v-model=\"user.firstName\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-group\">\r\n          <label>Last Name</label>\r\n          <input type=\"text\" name=\"Last Name\" class=\"form-control\" v-validate=\"{required: true, alpha_spaces: true}\" v-model=\"user.lastName\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-group\">\r\n          <label>Email</label>\r\n          <input type=\"email\" name=\"Email\" class=\"form-control\" v-validate=\"'required'\" v-model=\"user.email\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-group\">\r\n          <label>Mobile</label>\r\n          <input type=\"text\" name=\"Mobile\" class=\"form-control\" v-validate=\"{ rules: { required: true, regex: /^04\\d{8}$/} }\" v-model=\"user.mobile\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-inline\">\r\n          <label>User ID</label>\r\n          <span class=\"form-inline\">\r\n            <select type=\"text\" name=\"userType\" class=\"form-control w-25\" v-validate=\"{required: true}\" v-model=\"userType\" >\r\n              <option value=\"student\">Student</option>\r\n              <option value=\"staff\" >Staff</option>\r\n            </select>\r\n            <input type=\"text\" name=\"studentId\" class=\"form-control w-75\" v-if=\"userType === 'student'\" v-validate=\"{numeric: true}\" v-model=\"user.studentId\" />\r\n            <input type=\"text\" name=\"staffId\" class=\"form-control w-75\" v-if=\"userType === 'staff'\" v-validate=\"{numeric: true}\" v-model=\"user.staffId\" />\r\n          </span>\r\n        </fieldset>\r\n        <br>\r\n        <button type=\"submit\" class=\"submit btn btn-default mb-5\">Submit</button>\r\n      </form>\r\n    </section>\r\n  </div>\r\n</template>\r\n<script>\r\nexport default {\r\n  data() {\r\n    return {\r\n      user: {},\r\n      userType: {}\r\n    }\r\n  },\r\n  methods: {\r\n    addUser() {\r\n      if (!this.errors.all().length) {\r\n        this.axios.post('/api/users/', {  \r\n          firstName: this.user.firstName,\r\n          lastName: this.user.lastName,\r\n          email: this.user.email,\r\n          mobile: this.user.mobile,\r\n          staffId: this.user.staffId || null,\r\n          studentId: this.user.studentId || null\r\n        })\r\n          .then((response) => {\r\n            document.getElementById(\"loading\").style.display = \"block\";\r\n            this.$router.push({ name: 'users', params: { alert: 'User Added' } });\r\n          })\r\n          .catch(error => console.log(error));\r\n      }\r\n    },\r\n    selectRole(){\r\n        alert('Hello');\r\n    }\r\n  }\r\n}\r\n</script>\r\n<style scoped>\r\nform {\r\n  max-width: 500px;\r\n  text-align: center;\r\n  display: inline;\r\n}\r\n\r\n#studentId, #staffId {\r\n  \r\n}\r\n\r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\nform[data-v-58425d8c] {\r\n  max-width: 500px;\r\n  text-align: center;\r\n  display: inline;\n}\n#studentId[data-v-58425d8c], #staffId[data-v-58425d8c] {\n}\r\n\r\n", "", {"version":3,"sources":["C:/Users/Misbil/Documents/IT/Diploma/Semester 2/Implementation 1 Cluster/sat/src/OnyxSAT/ClientApp/components/users/ClientApp/components/users/AddUser.vue?ffdeb7b2"],"names":[],"mappings":";AA0EA;EACA,iBAAA;EACA,mBAAA;EACA,gBAAA;CACA;AAEA;CAEA","file":"AddUser.vue","sourcesContent":["<template>\r\n  <div class=\"d-flex flex-column align-items-center container\">\r\n    <h1 class=\"display-4\">Add a User</h1>\r\n    <ul v-if=\"errors.any()\">\r\n      <li vb-for=\"error in errors.all()\"> {{ error }}</li>\r\n    </ul>\r\n    <section class=\"row w-100 d-flex align-items-center flex-column\">\r\n      <form @submit.prevent=\"addUser\" class=\"d-flex flex-column w-100 mb-3\">\r\n        <fieldset class=\"form-group\">\r\n          <label>First Name</label>\r\n          <input type=\"text\" name=\"First Name\" class=\"form-control\" v-validate=\"{required: true, alpha_spaces: true}\" v-model=\"user.firstName\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-group\">\r\n          <label>Last Name</label>\r\n          <input type=\"text\" name=\"Last Name\" class=\"form-control\" v-validate=\"{required: true, alpha_spaces: true}\" v-model=\"user.lastName\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-group\">\r\n          <label>Email</label>\r\n          <input type=\"email\" name=\"Email\" class=\"form-control\" v-validate=\"'required'\" v-model=\"user.email\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-group\">\r\n          <label>Mobile</label>\r\n          <input type=\"text\" name=\"Mobile\" class=\"form-control\" v-validate=\"{ rules: { required: true, regex: /^04\\d{8}$/} }\" v-model=\"user.mobile\" />\r\n        </fieldset>\r\n        <fieldset class=\"form-inline\">\r\n          <label>User ID</label>\r\n          <span class=\"form-inline\">\r\n            <select type=\"text\" name=\"userType\" class=\"form-control w-25\" v-validate=\"{required: true}\" v-model=\"userType\" >\r\n              <option value=\"student\">Student</option>\r\n              <option value=\"staff\" >Staff</option>\r\n            </select>\r\n            <input type=\"text\" name=\"studentId\" class=\"form-control w-75\" v-if=\"userType === 'student'\" v-validate=\"{numeric: true}\" v-model=\"user.studentId\" />\r\n            <input type=\"text\" name=\"staffId\" class=\"form-control w-75\" v-if=\"userType === 'staff'\" v-validate=\"{numeric: true}\" v-model=\"user.staffId\" />\r\n          </span>\r\n        </fieldset>\r\n        <br>\r\n        <button type=\"submit\" class=\"submit btn btn-default mb-5\">Submit</button>\r\n      </form>\r\n    </section>\r\n  </div>\r\n</template>\r\n<script>\r\nexport default {\r\n  data() {\r\n    return {\r\n      user: {},\r\n      userType: {}\r\n    }\r\n  },\r\n  methods: {\r\n    addUser() {\r\n      if (!this.errors.all().length) {\r\n        this.axios.post('/api/users/', {  \r\n          firstName: this.user.firstName,\r\n          lastName: this.user.lastName,\r\n          email: this.user.email,\r\n          mobile: this.user.mobile,\r\n          staffId: this.user.staffId || null,\r\n          studentId: this.user.studentId || null\r\n        })\r\n          .then((response) => {\r\n            document.getElementById(\"loading\").style.display = \"block\";\r\n            this.$router.push({ name: 'users', params: { alert: 'User Added' } });\r\n          })\r\n          .catch(error => console.log(error));\r\n      }\r\n    },\r\n    selectRole(){\r\n        alert('Hello');\r\n    }\r\n  }\r\n}\r\n</script>\r\n<style scoped>\r\nform {\r\n  max-width: 500px;\r\n  text-align: center;\r\n  display: inline;\r\n}\r\n\r\n#studentId, #staffId {\r\n  \r\n}\r\n\r\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -11561,7 +11561,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.table-container[data-v-2408d065] {\n  max-width: 600px;\n}\n.btn[data-v-2408d065] {\n  margin-left: 50px;\n  margin-right: 50px;\n  width: 100px;\n}\nthead[data-v-2408d065] {\n  min-width: 105px;\n  font-weight: bold;\n}\nh3[data-v-2408d065] {\n  font-size: 2.6em;\n}\n.list-group[data-v-2408d065] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.list-group-item[data-v-2408d065] {\n  margin-bottom: 5px;\n  margin-right: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.table-container[data-v-0e3cdca5] {\n  max-width: 600px;\n}\n.btn[data-v-0e3cdca5] {\n  margin-left: 50px;\n  margin-right: 50px;\n  width: 100px;\n}\nthead[data-v-0e3cdca5] {\n  min-width: 105px;\n  font-weight: bold;\n}\nh3[data-v-0e3cdca5] {\n  font-size: 2.6em;\n}\n.list-group[data-v-0e3cdca5] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.list-group-item[data-v-0e3cdca5] {\n  margin-bottom: 5px;\n  margin-right: 5px;\n}\n", ""]);
 
 // exports
 
@@ -11575,7 +11575,7 @@ exports = module.exports = __webpack_require__(2)(true);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-78541178] {\r\n  max-width: 650px;\n}\nselect[name=\"sessions\"][data-v-78541178] {\r\n  width: 130px;\n}\r\n", "", {"version":3,"sources":["C:/Users/kyle-/Documents/GitHub/sat/src/onyxsat/ClientApp/components/classes/ClientApp/components/classes/Class.vue?3dec3d72"],"names":[],"mappings":";AAuIA;EACA,iBAAA;CACA;AAEA;EACA,aAAA;CACA","file":"Class.vue","sourcesContent":["<template>\r\n  <div class=\"d-flex flex-column align-items-center container\">\r\n    <template v-if=\"Object.keys(classGroup).length\">\r\n      <h1 class=\"display-4 mb-4\">{{ classGroup.name }}</h1>\r\n      <div class=\"d-flex justify-content-between align-items w-100 mb-3\">\r\n        <select type=\"text\" name=\"sessions\" class=\"form-control\" v-validate=\"'required'\" v-model=\"selectedSession\" @change=\"setSession\">\r\n          <option v-for=\"session in classGroup.sessions\" :value=\"session.dateTime\">{{ formatDate(session.dateTime) }}</option>\r\n        </select>\r\n        <button class=\"btn btn-default text-xs-right float-right\" v-on:click=\"markAllPresent()\">Mark All As Present</button>      \r\n      </div>\r\n      <table class=\"table table-bordered\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>Name</th>\r\n            <th>Student ID</th>\r\n            <th>Phone</th>\r\n            <th>Present</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody class=\"align-items-middle\">\r\n          <tr v-if=\"classGroup.enrolments\" v-for=\"a in classGroup.enrolments\">\r\n            <td>{{ a.user.firstName }} {{ a.user.lastName }}</td>\r\n            <td>{{ a.user.studentId }}</td>\r\n            <td>{{ a.user.mobile }}</td>\r\n            <td>\r\n              <select type=\"text\" name=\"attended\" class=\"form-control\" v-validate=\"{required: true}\" v-model=\"attended\">\r\n                <option value=\"true\">Yes</option>\r\n                <option value=\"false\" :selected=\"!studentAttended(a.user.cards)\">No</option>\r\n              </select>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"mb-5\" style=\"width: 600px;\">\r\n        <button class=\"btn btn-default text-xs-right float-left\" v-on:click=\"saveAttendances()\">Save</button>\r\n        <button class=\"btn btn-default text-xs-right float-right\" v-on:click=\"markAllPresent()\">Change all to present</button>\r\n      </div>\r\n    </template>\r\n    <not-found v-if=\"classNotFound\"></not-found>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nimport NotFound from '../404'\r\n\r\nexport default {\r\n  data() {\r\n    return {\r\n      classGroup: {},\r\n      selectedSession: '',\r\n      attended: [],\r\n      classNotFound: false\r\n    }\r\n  },\r\n  methods: {\r\n    getClass(id) {\r\n      this.axios.get('/api/classes/' + id)\r\n        .then(response => {\r\n          this.classGroup = response.data;\r\n          this.setSession();\r\n          })\r\n        .catch(error => {\r\n          if (error.response.status == 404)\r\n            this.classNotFound = true;\r\n          })\r\n    },\r\n    setSession() {\r\n      if(this.classGroup.currentSession) {                \r\n        this.classGroup.currentSession = this.classGroup.sessions.find(session => session.dateTime == this.selectedSession);\r\n      } else {\r\n      // Sets the initial session to the current day's or the most recent one        \r\n        let today = new Date();\r\n        this.classGroup.currentSession = this.classGroup.sessions.reverse().find(session => {\r\n          let dtSplit = session.dateTime.split(/[:T-]/g);          \r\n          let sessionDate = new Date(Date.UTC(dtSplit[0], parseInt(dtSplit[1], 10) - 1, dtSplit[2], dtSplit[3], dtSplit[4], dtSplit[5]));\r\n          return sessionDate <= today;\r\n        });\r\n        this.selectedSession = this.classGroup.currentSession.dateTime;      \r\n      }\r\n    },\r\n    studentAttended(cards) {\r\n      // checks if any of the cards have an attendance in the current session\r\n      if (!cards) return;\r\n      return cards.some(card => {\r\n        return this.classGroup.currentSession.attendances.some(attendance => card.cardNo == attendance.cardNo)     \r\n      });\r\n    },\r\n    formatDate(str) {\r\n      // formats dateTime into dd-mm-yyyy\r\n      return str.slice(0, str.indexOf('T')).split('-').reverse().join('-')\r\n    },\r\n    markAllPresent() {\r\n      // * Will select all option tags, is that the intention?\r\n      let options = document.getElementsByTagName(\"option\");\r\n      for (var i = 0; i < options.length; i++) {\r\n        if (options[i].value === \"true\") {\r\n          options[i].selected = \"selected\";\r\n        }\r\n      }\r\n    },\r\n    saveAttendances() {\r\n      let vClass = this.classGroup.enrolments;\r\n      for(var i = 0; i < vClass.length; i++) {\r\n        //Loop through users\r\n        if (attended[i] == \"true\") {\r\n          //If attended is makred as yes\r\n          if (!this.errors.all().length) {\r\n            //Create attendance for that user\r\n            this.axios.post('/api/attendances', {\r\n              dateDate: this.classGroup.dateTime,\r\n              verified: true,\r\n              cardNo: i.cards[0].cardNo,\r\n              roomNumber: classGroup.roomNumber,\r\n              card: i.cards[0],\r\n              session: classGroup.session[classGroup.session.length-1]\r\n            })\r\n              .catch(error => console.log(error));\r\n          }\r\n        } else {\r\n          this.axios.delete('/api/attendances/' + classGroup.session.length-1)\r\n          .catch(error => console.log(error));\r\n        }\r\n      }\r\n    }\r\n  },\r\n  created() {\r\n    this.getClass(this.$route.params.id);\r\n  },\r\n  components: {\r\n    NotFound\r\n  }\r\n}\r\n</script>\r\n\r\n<style scoped>\r\n.container {\r\n  max-width: 650px;\r\n}\r\n\r\nselect[name=\"sessions\"] {\r\n  width: 130px;\r\n}\r\n</style>"],"sourceRoot":""}]);
+exports.push([module.i, "\n.container[data-v-307a2384] {\r\n  max-width: 650px;\n}\nselect[name=\"sessions\"][data-v-307a2384] {\r\n  width: 130px;\n}\r\n", "", {"version":3,"sources":["C:/Users/Misbil/Documents/IT/Diploma/Semester 2/Implementation 1 Cluster/sat/src/OnyxSAT/ClientApp/components/classes/ClientApp/components/classes/Class.vue?393c9b3b"],"names":[],"mappings":";AAuIA;EACA,iBAAA;CACA;AAEA;EACA,aAAA;CACA","file":"Class.vue","sourcesContent":["<template>\r\n  <div class=\"d-flex flex-column align-items-center container\">\r\n    <template v-if=\"Object.keys(classGroup).length\">\r\n      <h1 class=\"display-4 mb-4\">{{ classGroup.name }}</h1>\r\n      <div class=\"d-flex justify-content-between align-items w-100 mb-3\">\r\n        <select type=\"text\" name=\"sessions\" class=\"form-control\" v-validate=\"'required'\" v-model=\"selectedSession\" @change=\"setSession\">\r\n          <option v-for=\"session in classGroup.sessions\" :value=\"session.dateTime\">{{ formatDate(session.dateTime) }}</option>\r\n        </select>\r\n        <button class=\"btn btn-default text-xs-right float-right\" v-on:click=\"markAllPresent()\">Mark All As Present</button>      \r\n      </div>\r\n      <table class=\"table table-bordered\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>Name</th>\r\n            <th>Student ID</th>\r\n            <th>Phone</th>\r\n            <th>Present</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody class=\"align-items-middle\">\r\n          <tr v-if=\"classGroup.enrolments\" v-for=\"a in classGroup.enrolments\">\r\n            <td>{{ a.user.firstName }} {{ a.user.lastName }}</td>\r\n            <td>{{ a.user.studentId }}</td>\r\n            <td>{{ a.user.mobile }}</td>\r\n            <td>\r\n              <select v-if=\"classGroup.currentSession\" type=\"text\" name=\"attended\" class=\"form-control\" v-validate=\"'required'\">\r\n                <option value=\"true\">Yes</option>\r\n                <option value=\"false\" :selected=\"!studentAttended(a.user.cards)\">No</option>\r\n              </select>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"mb-5\" style=\"width: 600px;\">\r\n        <button class=\"btn btn-default text-xs-right float-left\" v-on:click=\"saveAttendances()\">Save</button>\r\n        <button class=\"btn btn-default text-xs-right float-right\" v-on:click=\"markAllPresent()\">Change all to present</button>\r\n      </div>\r\n    </template>\r\n    <not-found v-if=\"classNotFound\"></not-found>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nimport NotFound from '../404'\r\n\r\nexport default {\r\n  data() {\r\n    return {\r\n      classGroup: {},\r\n      selectedSession: '',\r\n      attended: [],\r\n      classNotFound: false\r\n    }\r\n  },\r\n  methods: {\r\n    getClass(id) {\r\n      this.axios.get('/api/classes/' + id)\r\n        .then(response => {\r\n          this.classGroup = response.data;\r\n          if(this.classGroup.sessions.length)\r\n            this.setSession();\r\n          })\r\n        .catch(error => {\r\n          if (error.response.status == 404)\r\n            this.classNotFound = true;\r\n          })\r\n    },\r\n    setSession() {\r\n      if(this.classGroup.currentSession) {                \r\n        this.classGroup.currentSession = this.classGroup.sessions.find(session => session.dateTime == this.selectedSession);\r\n      } else {\r\n      // Sets the initial session to the current day's or the most recent one        \r\n        let today = new Date();\r\n        this.classGroup.currentSession = this.classGroup.sessions.reverse().find(session => {\r\n          let dtSplit = session.dateTime.split(/[:T-]/g);          \r\n          let sessionDate = new Date(Date.UTC(dtSplit[0], parseInt(dtSplit[1], 10) - 1, dtSplit[2], dtSplit[3], dtSplit[4], dtSplit[5]));\r\n          return sessionDate <= today;\r\n        });\r\n        this.selectedSession = this.classGroup.currentSession.dateTime;      \r\n      }\r\n    },\r\n    studentAttended(cards) {\r\n      // checks if any of the cards have an attendance in the current session\r\n      return cards.some(card => {\r\n        return this.classGroup.currentSession.attendances.some(attendance => card.cardNo == attendance.cardNo)     \r\n      });\r\n    },\r\n    formatDate(str) {\r\n      // formats dateTime into dd-mm-yyyy\r\n      return str.slice(0, str.indexOf('T')).split('-').reverse().join('-')\r\n    },\r\n    markAllPresent() {\r\n      // * Will select all option tags, is that the intention?\r\n      let options = document.getElementsByTagName(\"option\");\r\n      for (var i = 0; i < options.length; i++) {\r\n        if (options[i].value === \"true\") {\r\n          options[i].selected = \"selected\";\r\n        }\r\n      }\r\n    },\r\n    saveAttendances() {\r\n      let vClass = this.classGroup.enrolments;\r\n      for(var i = 0; i < vClass.length; i++) {\r\n        //Loop through users\r\n        if (attended[i] == \"true\") {\r\n          //If attended is makred as yes\r\n          if (!this.errors.all().length) {\r\n            //Create attendance for that user\r\n            this.axios.post('/api/attendances', {\r\n              dateDate: this.classGroup.dateTime,\r\n              verified: true,\r\n              cardNo: i.cards[0].cardNo,\r\n              roomNumber: classGroup.roomNumber,\r\n              card: i.cards[0],\r\n              session: classGroup.session[classGroup.session.length-1]\r\n            })\r\n              .catch(error => console.log(error));\r\n          }\r\n        } else {\r\n          this.axios.delete('/api/attendances/' + classGroup.session.length-1)\r\n          .catch(error => console.log(error));\r\n        }\r\n      }\r\n    }\r\n  },\r\n  created() {\r\n    this.getClass(this.$route.params.id);\r\n  },\r\n  components: {\r\n    NotFound\r\n  }\r\n}\r\n</script>\r\n\r\n<style scoped>\r\n.container {\r\n  max-width: 650px;\r\n}\r\n\r\nselect[name=\"sessions\"] {\r\n  width: 130px;\r\n}\r\n</style>"],"sourceRoot":""}]);
 
 // exports
 
@@ -11589,7 +11589,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\n.form-container[data-v-3baa41e2] {\n  width: 600px;\n}\nthead[data-v-3baa41e2], th[data-v-3baa41e2] {\n  min-width: 105px;\n}\ntd[data-v-3baa41e2] {\n  padding: 0;\n}\nh3[data-v-3baa41e2] {\n  font-size: 2.6em;\n}\n.list-group[data-v-3baa41e2] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.list-group-item[data-v-3baa41e2] {\n  margin-bottom: 5px;\n  margin-right: 5px;\n}\ntr[data-v-3baa41e2] {\n  height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.form-container[data-v-3efecb4f] {\n  width: 600px;\n}\nthead[data-v-3efecb4f], th[data-v-3efecb4f] {\n  min-width: 105px;\n}\ntd[data-v-3efecb4f] {\n  padding: 0;\n}\nh3[data-v-3efecb4f] {\n  font-size: 2.6em;\n}\n.list-group[data-v-3efecb4f] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.list-group-item[data-v-3efecb4f] {\n  margin-bottom: 5px;\n  margin-right: 5px;\n}\ntr[data-v-3efecb4f] {\n  height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -11603,7 +11603,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\nform[data-v-b1584e8a] {\n  max-width: 500px;\n  text-align: center;\n  display: inline;\n}\nselect[name=\"teacherId\"][data-v-b1584e8a] {\n  width: 500px;\n}\n", ""]);
+exports.push([module.i, "\nform[data-v-5c4d447b] {\n  max-width: 500px;\n  text-align: center;\n  display: inline;\n}\nselect[name=\"teacherId\"][data-v-5c4d447b] {\n  width: 500px;\n}\n", ""]);
 
 // exports
 
@@ -11812,7 +11812,7 @@ module.exports = Html5Entities;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Alert_vue__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Alert_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Alert_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5e120cd1_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Alert_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_62730dde_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Alert_vue__ = __webpack_require__(64);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -11831,7 +11831,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Alert_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5e120cd1_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Alert_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_62730dde_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Alert_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -11847,9 +11847,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5e120cd1", Component.options)
+    hotAPI.createRecord("data-v-62730dde", Component.options)
   } else {
-    hotAPI.reload("data-v-5e120cd1", Component.options)
+    hotAPI.reload("data-v-62730dde", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -13203,7 +13203,7 @@ module.exports = (__webpack_require__(5))(39);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6d247cba_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_06be6d63_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(55);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -13222,7 +13222,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_6d247cba_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_06be6d63_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -13238,9 +13238,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6d247cba", Component.options)
+    hotAPI.createRecord("data-v-06be6d63", Component.options)
   } else {
-    hotAPI.reload("data-v-6d247cba", Component.options)
+    hotAPI.reload("data-v-06be6d63", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -13261,7 +13261,7 @@ var content = __webpack_require__(7);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("5ab1c75e", content, false);
+var update = __webpack_require__(3)("6bb00917", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -13349,7 +13349,7 @@ exports.default = {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NavBar_vue__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NavBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NavBar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4af3db4b_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_NavBar_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1e6611ea_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_NavBar_vue__ = __webpack_require__(50);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -13368,7 +13368,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_NavBar_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4af3db4b_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_NavBar_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1e6611ea_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_NavBar_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -13384,9 +13384,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4af3db4b", Component.options)
+    hotAPI.createRecord("data-v-1e6611ea", Component.options)
   } else {
-    hotAPI.reload("data-v-4af3db4b", Component.options)
+    hotAPI.reload("data-v-1e6611ea", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -13407,7 +13407,7 @@ var content = __webpack_require__(8);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("526b9c92", content, false);
+var update = __webpack_require__(3)("2cd7d5a8", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -13500,7 +13500,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-4af3db4b", esExports)
+     __webpack_require__(0).rerender("data-v-1e6611ea", esExports)
   }
 }
 
@@ -13512,7 +13512,7 @@ if (true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Loading_vue__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Loading_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Loading_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_e9239d1e_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Loading_vue__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_be8ee49e_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Loading_vue__ = __webpack_require__(54);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -13531,7 +13531,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Loading_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_e9239d1e_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Loading_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_be8ee49e_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Loading_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -13547,9 +13547,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-e9239d1e", Component.options)
+    hotAPI.createRecord("data-v-be8ee49e", Component.options)
   } else {
-    hotAPI.reload("data-v-e9239d1e", Component.options)
+    hotAPI.reload("data-v-be8ee49e", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -13570,7 +13570,7 @@ var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("3f240aee", content, false);
+var update = __webpack_require__(3)("176adb12", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -13660,7 +13660,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-e9239d1e", esExports)
+     __webpack_require__(0).rerender("data-v-be8ee49e", esExports)
   }
 }
 
@@ -13684,7 +13684,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-6d247cba", esExports)
+     __webpack_require__(0).rerender("data-v-06be6d63", esExports)
   }
 }
 
@@ -13786,7 +13786,7 @@ exports.default = [{ path: '/', name: 'home', component: _Home2.default }, { pat
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7530717a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_bbc5058c_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__ = __webpack_require__(65);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -13800,12 +13800,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-7530717a"
+var __vue_scopeId__ = "data-v-bbc5058c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Home_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7530717a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_bbc5058c_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Home_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -13821,9 +13821,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7530717a", Component.options)
+    hotAPI.createRecord("data-v-bbc5058c", Component.options)
   } else {
-    hotAPI.reload("data-v-7530717a", Component.options)
+    hotAPI.reload("data-v-bbc5058c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -13844,7 +13844,7 @@ var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("f3ed812e", content, false);
+var update = __webpack_require__(3)("78631628", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -13917,7 +13917,7 @@ var content = __webpack_require__(11);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("b415af7e", content, false);
+var update = __webpack_require__(3)("0f746b46", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -13983,7 +13983,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-5e120cd1", esExports)
+     __webpack_require__(0).rerender("data-v-62730dde", esExports)
   }
 }
 
@@ -14025,7 +14025,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-7530717a", esExports)
+     __webpack_require__(0).rerender("data-v-bbc5058c", esExports)
   }
 }
 
@@ -14040,7 +14040,7 @@ var content = __webpack_require__(12);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("d7c1ae30", content, false);
+var update = __webpack_require__(3)("84dbf22e", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -14078,7 +14078,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-432d0be6", esExports)
+     __webpack_require__(0).rerender("data-v-c4681366", esExports)
   }
 }
 
@@ -14088,7 +14088,7 @@ if (true) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4ec2a45e_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Login_vue__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_8111dec4_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Login_vue__ = __webpack_require__(70);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -14102,12 +14102,12 @@ var __vue_script__ = null
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-4ec2a45e"
+var __vue_scopeId__ = "data-v-8111dec4"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4ec2a45e_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Login_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_8111dec4_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Login_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -14123,9 +14123,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4ec2a45e", Component.options)
+    hotAPI.createRecord("data-v-8111dec4", Component.options)
   } else {
-    hotAPI.reload("data-v-4ec2a45e", Component.options)
+    hotAPI.reload("data-v-8111dec4", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -14146,7 +14146,7 @@ var content = __webpack_require__(13);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("155d949f", content, false);
+var update = __webpack_require__(3)("c1ba4d12", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -14191,7 +14191,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-4ec2a45e", esExports)
+     __webpack_require__(0).rerender("data-v-8111dec4", esExports)
   }
 }
 
@@ -14209,7 +14209,7 @@ module.exports = "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Users_vue__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Users_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Users_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a6955b14_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Users_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_20f78eb6_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Users_vue__ = __webpack_require__(75);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -14228,7 +14228,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Users_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a6955b14_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Users_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_20f78eb6_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_Users_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -14244,9 +14244,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-a6955b14", Component.options)
+    hotAPI.createRecord("data-v-20f78eb6", Component.options)
   } else {
-    hotAPI.reload("data-v-a6955b14", Component.options)
+    hotAPI.reload("data-v-20f78eb6", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -14267,7 +14267,7 @@ var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("0a901bc5", content, false);
+var update = __webpack_require__(3)("6e1f3c94", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -14458,7 +14458,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-a6955b14", esExports)
+     __webpack_require__(0).rerender("data-v-20f78eb6", esExports)
   }
 }
 
@@ -14470,7 +14470,7 @@ if (true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddUser_vue__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddUser_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddUser_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_673aa4fa_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddUser_vue__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_58425d8c_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddUser_vue__ = __webpack_require__(79);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -14484,12 +14484,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-673aa4fa"
+var __vue_scopeId__ = "data-v-58425d8c"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddUser_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_673aa4fa_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddUser_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_58425d8c_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddUser_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -14505,9 +14505,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-673aa4fa", Component.options)
+    hotAPI.createRecord("data-v-58425d8c", Component.options)
   } else {
-    hotAPI.reload("data-v-673aa4fa", Component.options)
+    hotAPI.reload("data-v-58425d8c", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -14528,7 +14528,7 @@ var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("fe1e6144", content, false);
+var update = __webpack_require__(3)("3b560300", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -14846,7 +14846,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-673aa4fa", esExports)
+     __webpack_require__(0).rerender("data-v-58425d8c", esExports)
   }
 }
 
@@ -14858,7 +14858,7 @@ if (true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetails_vue__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetails_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetails_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2408d065_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetails_vue__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0e3cdca5_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetails_vue__ = __webpack_require__(83);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -14872,12 +14872,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-2408d065"
+var __vue_scopeId__ = "data-v-0e3cdca5"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetails_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2408d065_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetails_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0e3cdca5_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetails_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -14893,9 +14893,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2408d065", Component.options)
+    hotAPI.createRecord("data-v-0e3cdca5", Component.options)
   } else {
-    hotAPI.reload("data-v-2408d065", Component.options)
+    hotAPI.reload("data-v-0e3cdca5", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -14916,7 +14916,7 @@ var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("16b927c0", content, false);
+var update = __webpack_require__(3)("53deb663", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -15036,7 +15036,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-2408d065", esExports)
+     __webpack_require__(0).rerender("data-v-0e3cdca5", esExports)
   }
 }
 
@@ -15048,7 +15048,7 @@ if (true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Class_vue__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Class_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Class_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_78541178_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Class_vue__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_307a2384_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Class_vue__ = __webpack_require__(87);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -15062,12 +15062,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-78541178"
+var __vue_scopeId__ = "data-v-307a2384"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_Class_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_78541178_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Class_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_307a2384_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_Class_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -15083,9 +15083,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-78541178", Component.options)
+    hotAPI.createRecord("data-v-307a2384", Component.options)
   } else {
-    hotAPI.reload("data-v-78541178", Component.options)
+    hotAPI.reload("data-v-307a2384", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15106,7 +15106,7 @@ var content = __webpack_require__(17);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("bdfeb7a4", content, false);
+var update = __webpack_require__(3)("5652da6b", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -15154,7 +15154,7 @@ exports.default = {
 
       this.axios.get('/api/classes/' + id).then(function (response) {
         _this.classGroup = response.data;
-        _this.setSession();
+        if (_this.classGroup.sessions.length) _this.setSession();
       }).catch(function (error) {
         if (error.response.status == 404) _this.classNotFound = true;
       });
@@ -15179,7 +15179,6 @@ exports.default = {
     studentAttended: function studentAttended(cards) {
       var _this3 = this;
 
-      if (!cards) return;
       return cards.some(function (card) {
         return _this3.classGroup.currentSession.attendances.some(function (attendance) {
           return card.cardNo == attendance.cardNo;
@@ -15288,35 +15287,17 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._m(0), _vm._v(" "), _c('tbody', {
     staticClass: "align-items-middle"
   }, _vm._l((_vm.classGroup.enrolments), function(a) {
-    return (_vm.classGroup.enrolments) ? _c('tr', [_c('td', [_vm._v(_vm._s(a.user.firstName) + " " + _vm._s(a.user.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(a.user.studentId))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(a.user.mobile))]), _vm._v(" "), _c('td', [_c('select', {
+    return (_vm.classGroup.enrolments) ? _c('tr', [_c('td', [_vm._v(_vm._s(a.user.firstName) + " " + _vm._s(a.user.lastName))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(a.user.studentId))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(a.user.mobile))]), _vm._v(" "), _c('td', [(_vm.classGroup.currentSession) ? _c('select', {
       directives: [{
         name: "validate",
         rawName: "v-validate",
-        value: ({
-          required: true
-        }),
-        expression: "{required: true}"
-      }, {
-        name: "model",
-        rawName: "v-model",
-        value: (_vm.attended),
-        expression: "attended"
+        value: ('required'),
+        expression: "'required'"
       }],
       staticClass: "form-control",
       attrs: {
         "type": "text",
         "name": "attended"
-      },
-      on: {
-        "change": function($event) {
-          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
-            return o.selected
-          }).map(function(o) {
-            var val = "_value" in o ? o._value : o.value;
-            return val
-          });
-          _vm.attended = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-        }
       }
     }, [_c('option', {
       attrs: {
@@ -15329,7 +15310,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       domProps: {
         "selected": !_vm.studentAttended(a.user.cards)
       }
-    }, [_vm._v("No")])])])]) : _vm._e()
+    }, [_vm._v("No")])]) : _vm._e()])]) : _vm._e()
   }))]), _vm._v(" "), _c('div', {
     staticClass: "mb-5",
     staticStyle: {
@@ -15362,7 +15343,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-78541178", esExports)
+     __webpack_require__(0).rerender("data-v-307a2384", esExports)
   }
 }
 
@@ -15374,7 +15355,7 @@ if (true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetailsEdit_vue__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetailsEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetailsEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3baa41e2_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetailsEdit_vue__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3efecb4f_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetailsEdit_vue__ = __webpack_require__(91);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -15388,12 +15369,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-3baa41e2"
+var __vue_scopeId__ = "data-v-3efecb4f"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_UserDetailsEdit_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3baa41e2_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetailsEdit_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3efecb4f_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_UserDetailsEdit_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -15409,9 +15390,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-3baa41e2", Component.options)
+    hotAPI.createRecord("data-v-3efecb4f", Component.options)
   } else {
-    hotAPI.reload("data-v-3baa41e2", Component.options)
+    hotAPI.reload("data-v-3efecb4f", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15432,7 +15413,7 @@ var content = __webpack_require__(18);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("7f7e67cc", content, false);
+var update = __webpack_require__(3)("5cb83d3a", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -15798,7 +15779,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-3baa41e2", esExports)
+     __webpack_require__(0).rerender("data-v-3efecb4f", esExports)
   }
 }
 
@@ -15810,7 +15791,7 @@ if (true) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddClass_vue__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddClass_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddClass_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b1584e8a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddClass_vue__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5c4d447b_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddClass_vue__ = __webpack_require__(95);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -15824,12 +15805,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-b1584e8a"
+var __vue_scopeId__ = "data-v-5c4d447b"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_AddClass_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_b1584e8a_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddClass_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5c4d447b_hasScoped_true_node_modules_vue_loader_lib_selector_type_template_index_0_AddClass_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
@@ -15845,9 +15826,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b1584e8a", Component.options)
+    hotAPI.createRecord("data-v-5c4d447b", Component.options)
   } else {
-    hotAPI.reload("data-v-b1584e8a", Component.options)
+    hotAPI.reload("data-v-5c4d447b", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15868,7 +15849,7 @@ var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("0c0efdcf", content, false);
+var update = __webpack_require__(3)("b818c49c", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -16193,7 +16174,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (true) {
   module.hot.accept()
   if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-b1584e8a", esExports)
+     __webpack_require__(0).rerender("data-v-5c4d447b", esExports)
   }
 }
 

@@ -38,8 +38,11 @@ namespace OnyxSAT.Controllers
       }
 
       var @class = await _context.Classes
+        .Include(c => c.Sessions)
+          .ThenInclude(s => s.Attendances)
         .Include(c => c.Enrolments)
           .ThenInclude(e => e.User)
+            .ThenInclude(u => u.Cards)
         .AsNoTracking()
         .SingleOrDefaultAsync(m => m.ClassId == id);
 
@@ -47,7 +50,6 @@ namespace OnyxSAT.Controllers
       {
         return NotFound();
       }
-
       return Ok(@class);
     }
 
@@ -97,10 +99,12 @@ namespace OnyxSAT.Controllers
 
       _context.Classes.Add(@class);
       await _context.SaveChangesAsync();
+      await CreateSessions(@class);
 
       return CreatedAtAction("GetClass", new { id = @class.ClassId }, @class);
     }
 
+    // POST: api/Classes/3/enrol
     [HttpPost("{id}/enrol")]
     public async Task<IActionResult> EnrolStudent([FromRoute] int id, [FromBody] Enrolment @enrolment)
     {
@@ -131,7 +135,7 @@ namespace OnyxSAT.Controllers
         }
       }
 
-      return CreatedAtAction("EnrolStudent", new { classId = @enrolment.ClassId, userId = @enrolment.UserId}, @enrolment);
+      return CreatedAtAction("EnrolStudent", new { classId = @enrolment.ClassId, userId = @enrolment.UserId }, @enrolment);
     }
 
     // DELETE: api/Classes/5
@@ -155,9 +159,37 @@ namespace OnyxSAT.Controllers
       return Ok(@class);
     }
 
+    private async Task CreateSessions(Class @class)
+    {
+      var session = new Session { ClassId = @class.ClassId, RoomNumber = @class.Location };
+
+      for (DateTime dt = @class.StartTime; dt < @class.EndTime; dt = dt.AddDays(1.0))
+      {
+        if (dt.DayOfWeek.ToString() == @class.DayOfWeek)
+        {
+          session.DateTime = dt;
+
+          _context.Sessions.Add(session);
+          try
+          {
+            await _context.SaveChangesAsync();
+          }
+          catch (DbUpdateException)
+          {
+            throw;
+          }
+        }
+      }
+    }
+
     private bool ClassExists(int id)
     {
       return _context.Classes.Any(e => e.ClassId == id);
+    }
+
+    private bool SessionExists(DateTime id)
+    {
+      return _context.Sessions.Any(e => e.DateTime == id);
     }
   }
 }
