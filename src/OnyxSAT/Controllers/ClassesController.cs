@@ -9,190 +9,190 @@ using OnyxSAT.Data;
 using OnyxSAT.Models;
 
 namespace OnyxSAT.Controllers
+{
+  [Produces("application/json")]
+  [Route("api/Classes")]
+  public class ClassesController : Controller
   {
-    [Produces("application/json")]
-    [Route("api/Classes")]
-    public class ClassesController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public ClassesController(ApplicationDbContext context)
     {
-      private readonly ApplicationDbContext _context;
+      _context = context;
+    }
 
-      public ClassesController(ApplicationDbContext context)
+    // GET: api/Classes
+    [HttpGet]
+    public IEnumerable<Class> GetClasses()
+    {
+      return _context.Classes;
+    }
+
+    // GET: api/Classes/5
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetClass([FromRoute] int id)
+    {
+      if (!ModelState.IsValid)
       {
-        _context = context;
+        return BadRequest(ModelState);
       }
 
-      // GET: api/Classes
-      [HttpGet]
-      public IEnumerable<Class> GetClasses()
+      var @class = await _context.Classes
+        .Include(c => c.Sessions)
+        .ThenInclude(s => s.Attendances)
+        .Include(c => c.Enrolments)
+        .ThenInclude(e => e.User)
+        .ThenInclude(u => u.Cards)
+        .AsNoTracking()
+        .SingleOrDefaultAsync(m => m.ClassId == id);
+
+      if (@class == null)
       {
-        return _context.Classes;
+        return NotFound();
+      }
+      return Ok(@class);
+    }
+
+    // PUT: api/Classes/5
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutClass([FromRoute] int id, [FromBody] Class @class)
+    {
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState);
       }
 
-      // GET: api/Classes/5
-      [HttpGet("{id}")]
-      public async Task<IActionResult> GetClass([FromRoute] int id)
+      if (id != @class.ClassId)
       {
-        if (!ModelState.IsValid)
-        {
-          return BadRequest(ModelState);
-        }
+        return BadRequest();
+      }
 
-        var @class = await _context.Classes
-          .Include(c => c.Sessions)
-          .ThenInclude(s => s.Attendances)
-          .Include(c => c.Enrolments)
-          .ThenInclude(e => e.User)
-          .ThenInclude(u => u.Cards)
-          .AsNoTracking()
-          .SingleOrDefaultAsync(m => m.ClassId == id);
+      _context.Entry(@class).State = EntityState.Modified;
 
-        if (@class == null)
+      try
+      {
+        await _context.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!ClassExists(id))
         {
           return NotFound();
         }
-        return Ok(@class);
+        else
+        {
+          throw;
+        }
       }
 
-      // PUT: api/Classes/5
-      [HttpPut("{id}")]
-      public async Task<IActionResult> PutClass([FromRoute] int id, [FromBody] Class @class)
+      return NoContent();
+    }
+
+    // POST: api/Classes
+    [HttpPost]
+    public async Task<IActionResult> PostClass([FromBody] Class @class)
+    {
+      if (!ModelState.IsValid)
       {
-        if (!ModelState.IsValid)
-        {
-          return BadRequest(ModelState);
-        }
-
-        if (id != @class.ClassId)
-        {
-          return BadRequest();
-        }
-
-        _context.Entry(@class).State = EntityState.Modified;
-
-        try
-        {
-          await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-          if (!ClassExists(id))
-          {
-            return NotFound();
-          }
-          else
-          {
-            throw;
-          }
-        }
-
-        return NoContent();
+        return BadRequest(ModelState);
       }
 
-      // POST: api/Classes
-      [HttpPost]
-      public async Task<IActionResult> PostClass([FromBody] Class @class)
-      {
-        if (!ModelState.IsValid)
-        {
-          return BadRequest(ModelState);
-        }
+      _context.Classes.Add(@class);
+      await _context.SaveChangesAsync();
+      await CreateSessions(@class);
 
-        _context.Classes.Add(@class);
+      return CreatedAtAction("GetClass", new { id = @class.ClassId }, @class);
+    }
+
+    // POST: api/Classes/3/enrol
+    [HttpPost("{id}/enrol")]
+    public async Task<IActionResult> EnrolStudent([FromRoute] int id, [FromBody] Enrolment @enrolment)
+    {
+      @enrolment.ClassId = id;
+
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState);
+      }
+
+      _context.Enrolments.Add(@enrolment);
+
+      try
+      {
         await _context.SaveChangesAsync();
-        await CreateSessions(@class);
+      }
+      catch (DbUpdateException)
+      {
+        var studentIsEnrolled = _context.Enrolments.Any(e => e.ClassId == @enrolment.ClassId && e.UserId == @enrolment.UserId);
 
-        return CreatedAtAction("GetClass", new { id = @class.ClassId }, @class);
+        if (studentIsEnrolled)
+        {
+          return new StatusCodeResult(StatusCodes.Status409Conflict);
+        }
+        else
+        {
+          throw;
+        }
       }
 
-      // POST: api/Classes/3/enrol
-      [HttpPost("{id}/enrol")]
-      public async Task<IActionResult> EnrolStudent([FromRoute] int id, [FromBody] Enrolment @enrolment)
+      return CreatedAtAction("EnrolStudent", new { classId = @enrolment.ClassId, userId = @enrolment.UserId }, @enrolment);
+    }
+
+    // DELETE: api/Classes/5
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteClass([FromRoute] int id)
+    {
+      if (!ModelState.IsValid)
       {
-        @enrolment.ClassId = id;
-
-        if (!ModelState.IsValid)
-        {
-          return BadRequest(ModelState);
-        }
-
-        _context.Enrolments.Add(@enrolment);
-
-        try
-        {
-          await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateException)
-        {
-          var studentIsEnrolled = _context.Enrolments.Any(e => e.ClassId == @enrolment.ClassId && e.UserId == @enrolment.UserId);
-
-          if (studentIsEnrolled)
-          {
-            return new StatusCodeResult(StatusCodes.Status409Conflict);
-          }
-          else
-          {
-            throw;
-          }
-        }
-
-        return CreatedAtAction("EnrolStudent", new { classId = @enrolment.ClassId, userId = @enrolment.UserId }, @enrolment);
+        return BadRequest(ModelState);
       }
 
-      // DELETE: api/Classes/5
-      [HttpDelete("{id}")]
-      public async Task<IActionResult> DeleteClass([FromRoute] int id)
+      var @class = await _context.Classes.SingleOrDefaultAsync(m => m.ClassId == id);
+      if (@class == null)
       {
-        if (!ModelState.IsValid)
-        {
-          return BadRequest(ModelState);
-        }
-
-        var @class = await _context.Classes.SingleOrDefaultAsync(m => m.ClassId == id);
-        if (@class == null)
-        {
-          return NotFound();
-        }
-
-        _context.Classes.Remove(@class);
-        await _context.SaveChangesAsync();
-
-        return Ok(@class);
+        return NotFound();
       }
 
-      private async Task CreateSessions(Class @class)
-      {
-        var session = new Session { ClassId = @class.ClassId, RoomNumber = @class.Location };
+      _context.Classes.Remove(@class);
+      await _context.SaveChangesAsync();
 
-        for (DateTime dt = @class.StartTime; dt < @class.EndTime; dt = dt.AddDays(1.0))
+      return Ok(@class);
+    }
+
+    private async Task CreateSessions(Class @class)
+    {
+      var session = new Session { ClassId = @class.ClassId, RoomNumber = @class.Location };
+
+      for (DateTime dt = @class.StartTime; dt < @class.EndTime; dt = dt.AddDays(1.0))
+      {
+        if (dt.DayOfWeek.ToString() == @class.DayOfWeek)
         {
+          session.DateTime = dt;
+          _context.Sessions.Add(session);
+          _context.SaveChangesAsync();
           if (dt.DayOfWeek.ToString() == @class.DayOfWeek)
           {
             session.DateTime = dt;
             _context.Sessions.Add(session);
-            _context.SaveChangesAsync();
-            if (dt.DayOfWeek.ToString() == @class.DayOfWeek)
+            try
             {
-              session.DateTime = dt;
-              _context.Sessions.Add(session);
-              try
-              {
-                await _context.SaveChangesAsync();
-              }
-              catch (DbUpdateException)
-              {
-                throw;
-              }
+              await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+              throw;
             }
           }
         }
-        private bool ClassExists(int id)
-        {
-          return _context.Classes.Any(e => e.ClassId == id);
-        }
-
-        private bool SessionExists(DateTime id)
-        {
-          return _context.Sessions.Any(e => e.DateTime == id);
-        }
       }
     }
+    private bool ClassExists(int id)
+    {
+      return _context.Classes.Any(e => e.ClassId == id);
+    }
+    private bool SessionExists(DateTime id)
+    {
+      return _context.Sessions.Any(e => e.DateTime == id);
+    }
+  }
+}
