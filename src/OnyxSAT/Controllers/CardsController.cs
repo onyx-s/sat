@@ -90,6 +90,8 @@ namespace OnyxSAT.Controllers
             return NoContent();
         }
 
+
+
         // POST: api/Cards
         [HttpPost]
         public async Task<IActionResult> PostCard([FromBody] Card card)
@@ -102,6 +104,16 @@ namespace OnyxSAT.Controllers
             _context.Cards.Add(card);
             await _context.SaveChangesAsync();
 
+            //Make attendance
+            /* 
+            using (WebClient wc = new WebCLient()) {
+                wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
+                var att = new Attendance { RoomNumber = "1", CardNo = card.CardNo };
+                string res = wc.UploadString("http://onyxsat.azurewebsites.net/api/attendances", att);
+            }*/
+            var att = new Attendance { RoomNumber = "SomePlace", CardNo = card.CardNo, DateTime = System.DateTime.Now };
+            AttendancesController ac = new AttendancesController(_context);
+            ac.PostAttendance(att);
             return CreatedAtAction("GetCard", new { id = card.CardNo }, card);
         }
 
