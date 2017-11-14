@@ -158,7 +158,7 @@ namespace OnyxSAT.Controllers
 
       return Ok(@class);
     }
-
+    
     private async Task CreateSessions(Class @class)
     {
       var session = new Session { ClassId = @class.ClassId, RoomNumber = @class.Location };
@@ -176,7 +176,7 @@ namespace OnyxSAT.Controllers
             _context.Sessions.Add(session);
             try
             {
-              await _context.SaveChangesAsync();
+              _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {

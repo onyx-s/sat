@@ -91,6 +91,8 @@ namespace OnyxSAT.Controllers
         return BadRequest(ModelState);
       }
 
+      attendance.DateTime = System.DateTime.Now;
+
       Card card = await _context.Cards.SingleOrDefaultAsync(m => m.CardNo == attendance.CardNo);
 
       if (card == null)

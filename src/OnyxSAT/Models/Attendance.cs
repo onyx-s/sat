@@ -7,7 +7,7 @@ namespace OnyxSAT.Models
 {
     public class Attendance
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        // [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public DateTime DateTime { get; set; }
         public Boolean? Verified { get; set; }
 

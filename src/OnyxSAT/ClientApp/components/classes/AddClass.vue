@@ -1,14 +1,11 @@
 <template>
   <div class="d-flex flex-column align-items-center container">
     <h1 class="display-4">Add a Class</h1>
-    <ul v-if="errors.any()">
-      <li v-for="error in errors.all()"> {{ error }}</li>
-    </ul>
     <section class="row w-100 d-flex align-items-center flex-column">
       <form @submit.prevent="addClass" class="d-flex flex-column w-100 mb-3">
         <fieldset class="form-group">
           <label>Class Name</label>
-          <input type="text" name="Class Name" class="form-control" v-validate="{required: true, alpha_spaces: true}" v-model="classGroup.name" />
+          <input type="text" name="Class Name" class="form-control" v-validate="{required: true}" v-model="classGroup.name" />
         </fieldset>
         <fieldset class="form-group">
           <label>Day</label>
@@ -24,11 +21,11 @@
         </fieldset>
         <fieldset class="form-group">
           <label>Start Time</label>
-          <input type="time" name="startTime" class="form-control" v-validate="{required:true}" v-model="classGroup.startTime" />
+          <input type="text" name="startTime" class="form-control" v-validate="{required:true}" v-model="classGroup.startTime" />
         </fieldset>
         <fieldset class="form-group">
           <label>End Time</label>
-          <input type="time" name="endTime" class="form-control" v-validate="{required: true}" v-model="classGroup.endTime" />
+          <input type="text" name="endTime" class="form-control" v-validate="{required: true}" v-model="classGroup.endTime" />
         </fieldset>
         <fieldset class="form-group">
           <label>Location</label>
