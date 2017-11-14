@@ -6,7 +6,6 @@
         <select type="text" name="sessions" class="form-control" v-validate="'required'" v-model="selectedSession" @change="setSession">
           <option v-for="session in classGroup.sessions" :value="session.dateTime">{{ formatDate(session.dateTime) }}</option>
         </select>
-        <button class="btn btn-default text-xs-right float-right" v-on:click="markAllPresent()">Mark All As Present</button>      
       </div>
       <table class="table table-bordered">
         <thead class="thead-default">

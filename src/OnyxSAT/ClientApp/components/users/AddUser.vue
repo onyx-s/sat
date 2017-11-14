@@ -1,9 +1,6 @@
 <template>
   <div class="d-flex flex-column align-items-center container">
     <h1 class="display-4">Add a User</h1>
-    <ul v-if="errors.any()">
-      <li vb-for="error in errors.all()"> {{ error }}</li>
-    </ul>
     <section class="row w-100 d-flex align-items-center flex-column">
       <form @submit.prevent="addUser" class="d-flex flex-column w-100 mb-3">
         <fieldset class="form-group">

@@ -1,9 +1,11 @@
 <template>
-
 	<div class="d-flex flex-column">
 		<h1 class="align-self-center display-4 mb-4">Welcome, {{ user.firstName}} {{user.lastName}}</h1>
 		<div class="alert align-self-center">
 			<alert v-if="alert" :message="alert"></alert>
+		</div>
+		<div class="content-row button-row">
+ 			<router-link to="classes/add" tag="button" class="btn btn-default align-self-start mb-3" append>Add Class</router-link>
 		</div>
 		<table class="table table-bordered mb-5">
 			<thead class="thead-default">
@@ -39,9 +41,9 @@
 	table
 		width: 80%
 		margin: 0 auto
-	
-	.btn
-		margin-left: 111px
+	.button-row
+		width: 80%
+		margin: 0 auto
 </style>
 
 <script>

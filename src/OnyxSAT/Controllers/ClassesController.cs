@@ -39,10 +39,10 @@ namespace OnyxSAT.Controllers
 
       var @class = await _context.Classes
         .Include(c => c.Sessions)
-          .ThenInclude(s => s.Attendances)
+        .ThenInclude(s => s.Attendances)
         .Include(c => c.Enrolments)
-          .ThenInclude(e => e.User)
-            .ThenInclude(u => u.Cards)
+        .ThenInclude(e => e.User)
+        .ThenInclude(u => u.Cards)
         .AsNoTracking()
         .SingleOrDefaultAsync(m => m.ClassId == id);
 
@@ -158,7 +158,7 @@ namespace OnyxSAT.Controllers
 
       return Ok(@class);
     }
-
+    
     private async Task CreateSessions(Class @class)
     {
       var session = new Session { ClassId = @class.ClassId, RoomNumber = @class.Location };
@@ -168,25 +168,28 @@ namespace OnyxSAT.Controllers
         if (dt.DayOfWeek.ToString() == @class.DayOfWeek)
         {
           session.DateTime = dt;
-
           _context.Sessions.Add(session);
-          try
+          _context.SaveChangesAsync();
+          if (dt.DayOfWeek.ToString() == @class.DayOfWeek)
           {
-            await _context.SaveChangesAsync();
-          }
-          catch (DbUpdateException)
-          {
-            throw;
+            session.DateTime = dt;
+            _context.Sessions.Add(session);
+            try
+            {
+              _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+              throw;
+            }
           }
         }
       }
     }
-
     private bool ClassExists(int id)
     {
       return _context.Classes.Any(e => e.ClassId == id);
     }
-
     private bool SessionExists(DateTime id)
     {
       return _context.Sessions.Any(e => e.DateTime == id);
