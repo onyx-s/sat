@@ -7,7 +7,7 @@ namespace OnyxSAT.Models
 {
     public class Session
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public DateTime DateTime { get; set; }
         public string RoomNumber { get; set; }
 

@@ -37,7 +37,10 @@ namespace OnyxSAT.Controllers
                 return BadRequest(ModelState);
             }
 
-            var session = await _context.Sessions.SingleOrDefaultAsync(m => m.DateTime == id);
+            var session = await _context.Sessions
+                .Include(s => s.Attendances)
+                .AsNoTracking()
+                .SingleOrDefaultAsync(m => m.DateTime == id);
 
             if (session == null)
             {
@@ -90,7 +93,8 @@ namespace OnyxSAT.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            //Sets datetime to system time if null
+            if (session.DateTime == null) session.DateTime = System.DateTime.Now;
             _context.Sessions.Add(session);
             try
             {
